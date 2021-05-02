@@ -5,6 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{{ meta.title }}</title>
     <link rel="stylesheet" href="{{ '/assets/styles/main.css' | url }}">
+
+    <link rel="preload" as="font" href="{{ '/assets/fonts/Rubik-Bold.woff2' | url }}" type="font/woff2" crossorigin="anonymous">
+    <link rel="preload" as="font" href="{{ '/assets/fonts/Rubik-Medium.woff2' | url }}" type="font/woff2" crossorigin="anonymous">
+    <link rel="preload" as="font" href="{{ '/assets/fonts/Rubik-Regular.woff2' | url }}" type="font/woff2" crossorigin="anonymous">
+
     {% include "meta.njk" %}
   </head>
   <body>

@@ -1,0 +1,26 @@
+<ol reversed class="list" start="{{ postlist.length }}">
+  {% for post in postlist | reverse %}
+    <li class="list__item {% if post.data.draft %}list__item--draft{% endif %}" >
+      <h3 class="list__title">
+        <a href="{{ post.url | url }}" class="list__link" rel="bookmark">
+          {{ post.data.title }}
+        </a>
+      </h3>
+      <div class="list__meta">
+        <time class="list__date" datetime="{{ post.date | dateToFormat('DDD')  }}">
+          {{ post.date | dateToFormat('DDD')  }}
+        </time>
+
+        {% if post.data.draft %}
+          <span aria-hidden="true">&sdot;</span>
+          <span class="list__status">(Draft)</span>
+        {% endif %}
+      </div>
+      <p class="list__excerpt">
+        {% if post.data.excerpt %}
+          {{ post.data.excerpt }}
+        {% endif %}
+      </p>
+    </li>
+  {% endfor %}
+</ol>

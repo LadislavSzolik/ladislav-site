@@ -1,0 +1,43 @@
+{
+  "name": "ladislav-szolik",
+  "version": "1.0.0",
+  "description": "App designer and developer",
+  "scripts": {
+    "watch:sass": "sass --watch _src/sass:_site/css",
+    "build:sass": "sass _src/sass:_site/css",
+    "start": "npm run dev",
+    "dev": "run-s clean eleventy:dev --print-label",
+    "build": "run-s clean eleventy:prod --print-label",
+    "eleventy:dev": "cross-env ELEVENTY_ENV=development eleventy --serve",
+    "eleventy:prod": "cross-env ELEVENTY_ENV=production eleventy",
+    "clean": "del-cli dist"
+  },
+  "keywords": [],
+  "author": "Ladislav Szolik",
+  "license": "ISC",
+  "devDependencies": {
+    "@11ty/eleventy": "^0.12.1",
+    "@11ty/eleventy-plugin-rss": "^1.1.1",
+    "@11ty/eleventy-navigation": "^0.1.6",
+    "@babel/core": "^7.13.14",
+    "@babel/plugin-transform-runtime": "^7.13.10",
+    "@babel/preset-env": "^7.13.12",
+    "babel-loader": "^8.2.2",
+    "clean-css": "^5.1.2",
+    "critical": "^3.0.1",
+    "cssesc": "^3.0.0",
+    "focus-trap": "^6.4.0",
+    "focus-visible": "^5.2.0",
+    "html-minifier": "^4.0.0",
+    "luxon": "^1.26.0",
+    "markdown-it-anchor": "^7.1.0",
+    "memfs": "^3.2.2",
+    "node-sass": "^5.0.0",
+    "npm-run-all": "^4.1.5",
+    "sass": "^1.32.12",
+    "webpack": "^5.36.2"
+  },
+  "dependencies": {
+    "cross-env": "^7.0.3"
+  }
+}

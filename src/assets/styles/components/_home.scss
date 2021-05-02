@@ -1,0 +1,27 @@
+.home {
+  @include mq(lg) {
+    &__header {
+      margin-bottom: 2rem;
+    }
+  }
+  &__title {
+    font-size: 3.5rem;
+    font-weight: 700;
+    letter-spacing: -0.05rem;
+    color: var(--color-primary);
+  }
+  &__subtitle {
+    font-size: 1.75rem;
+    font-weight: 600;
+    letter-spacing: 0.09rem;
+    color: var(--color-secondary);
+  }
+  @include mq-down(lg) {
+    &__title {
+      font-size: 2rem;
+    }
+    &__subtitle {
+      font-size: 1.25rem;
+    }
+  }
+}

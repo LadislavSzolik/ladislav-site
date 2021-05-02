@@ -1,0 +1,56 @@
+.markdown {
+  h2,
+  h3 {
+    margin-top: 0.25rem;
+    margin-bottom: 0.75rem;
+  }
+  ul,
+  ol {
+    padding-left: 1.5rem;
+  }
+
+  ul,
+  ol,
+  p {
+    padding-bottom: 1rem;
+    color: var(--color-text-offset);
+  }
+
+  ul,
+  ol {
+    list-style-type: none;
+  }
+
+  ul li::before {
+    content: '\2022';
+    font-weight: bold;
+    display: inline-block;
+    width: 1rem;
+    margin-left: -1rem;
+    color: var(--color-primary);
+  }
+
+  ol {
+    counter-reset: li;
+  }
+  ol li::before {
+    content: counter(li);
+    display: inline-block;
+    width: 1rem;
+    margin-left: -1.5rem;
+    margin-right: 0.5rem;
+    text-align: right;
+    direction: rtl;
+    color: var(--color-primary);
+  }
+  ol li {
+    counter-increment: li;
+  }
+  .direct-link {
+    color: var(--color-bg-offset);
+    text-decoration: none;
+    @include hover-focus {
+      color: var(--color-primary);
+    }
+  }
+}

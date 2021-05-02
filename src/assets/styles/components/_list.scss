@@ -1,0 +1,34 @@
+.list {
+  &__item {
+    max-width: 32rem;
+    margin-bottom: 1.25rem;
+
+    @include mq(md) {
+      margin-bottom: 1.75rem;
+    }
+  }
+  &__link {
+    text-decoration: none;
+    box-shadow: inset 0 -0.1666666667em 0 0 var(--color-bg),
+      inset 0 -0.3333333333em 0 0 var(--color-primary-link);
+    .postlist__item--draft & {
+      color: var(--color-secondary);
+    }
+  }
+  &__title {
+    margin-bottom: 0.5rem;
+  }
+  &__meta {
+    color: var(--color-text-meta);
+  }
+  &__status {
+    font-weight: 700;
+    color: var(--color-secondary);
+  }
+  &__excerpt {
+    color: var(--color-text-offset);
+    .postlist__item--draft & {
+      opacity: 0.5;
+    }
+  }
+}

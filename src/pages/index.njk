@@ -1,0 +1,22 @@
+---
+layout: base
+eleventyNavigation:
+  key: Home
+  order: 1
+permalink: /
+---
+
+<div class="container">
+  <header class="home__header">
+    <h1 class="home__title">Hi, I am ladislav</h1>
+    <p class="home__subtitle">app designer & developer </p>
+  </header>
+
+  <h2 class="page__subtitle" >Latest posts </h2>
+  {%- set postlist = collections.posts | limit(3) -%}
+  {% include "postlist.njk" %}
+
+  <h2 class="page__subtitle">Latest projects</h2>
+  {%- set projectlist = collections.projects | limit(3) -%}
+  {% include "projectlist.njk" %}
+</div>

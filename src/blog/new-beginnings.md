@@ -2,6 +2,7 @@
 title: New Beginning
 excerpt: I wanted to start a new year with a personal project where I learn something new and do something for myself...therefore I recreated my web page.
 date: 2021-01-04
+image: cover.svg
 ---
 
 In the past years I had a web site hosted at Squarespace. They are a nice provider. Very fancy templates, really cool analytics tools.

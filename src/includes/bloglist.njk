@@ -1,0 +1,32 @@
+<ol reversed class="list" start="{{ bloglist.length }}">
+  {% for blog in bloglist | reverse %}
+    <li class="list__item {% if blog.data.draft %}list__item--draft{% endif %}" >
+
+      {#<div class="list__cover" >
+        {% if blog.data.image %}
+          {{[blog.url, blog.data.image] | join | svgContent | safe  }}
+        {% endif %}
+      </div> #}
+      <h3 class="list__title">
+        <a href="{{ blog.url | url }}" class="list__link" rel="bookmark">
+          {{ blog.data.title }}
+        </a>
+      </h3>
+      <div class="list__meta">
+        <time class="list__date" datetime="{{ blog.date | dateToFormat('DDD')  }}">
+          {{ blog.date | dateToFormat('DDD')  }}
+        </time>
+
+        {% if blog.data.draft %}
+          <span aria-hidden="true">&sdot;</span>
+          <span class="list__status">(Draft)</span>
+        {% endif %}
+      </div>
+      <p class="list__excerpt">
+        {% if blog.data.excerpt %}
+          {{ blog.data.excerpt }}
+        {% endif %}
+      </p>
+    </li>
+  {% endfor %}
+</ol>

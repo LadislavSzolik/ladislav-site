@@ -1,7 +1,8 @@
 ---
-title: How many candidates?
-excerpt: Reflecting on my initial assumption at the beginning of my career change.
-date: 2021-02-04
+title: What do I need for a career change?
+excerpt: Years back I had few assumptions about changing my career. I revisited and evaluated those assumptions.
+image: cover.svg
+date: 2021-02-13
 ---
 
 A short list of my initial assumptions at the beginning of my career change from Software Engineer to UX Designer. Plus comments about how I see things today:

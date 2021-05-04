@@ -12,11 +12,11 @@ permalink: /
     <p class="home__subtitle">app designer & developer </p>
   </header>
 
-  <h2 class="page__subtitle" >Latest posts </h2>
-  {%- set postlist = collections.posts | limit(3) -%}
-  {% include "postlist.njk" %}
+  <h2 class="page__subtitle" >Blog </h2>
+  {%- set bloglist = collections.blog | limit(3) -%}
+  {% include "bloglist.njk" %}
 
-  <h2 class="page__subtitle">Latest projects</h2>
+  <h2 class="page__subtitle">Projects</h2>
   {%- set projectlist = collections.projects | limit(3) -%}
   {% include "projectlist.njk" %}
 </div>

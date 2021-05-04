@@ -2,9 +2,20 @@ const pluginRss = require('@11ty/eleventy-plugin-rss');
 const pluginNavigation = require('@11ty/eleventy-navigation');
 const markdownIt = require('markdown-it');
 const markdownItAnchor = require('markdown-it-anchor');
+const {DateTime} = require('luxon');
+const htmlmin = require('html-minifier');
+const critical = require('critical');
 
-const filters = require('./utils/filters.js');
-const transforms = require('./utils/transforms.js');
+const fs = require('fs');
+const path = require('path');
+const buildDir = 'dist';
+
+const isHomePage = (outputPath) => outputPath === `${buildDir}/index.html`;
+process.setMaxListeners(Infinity);
+const shouldTransformHTML = (outputPath) =>
+  outputPath &&
+  outputPath.endsWith('.html') &&
+  process.env.ELEVENTY_ENV === 'production';
 
 module.exports = function (config) {
   // Plugins
@@ -12,13 +23,67 @@ module.exports = function (config) {
   config.addPlugin(pluginNavigation);
 
   // Filters
-  Object.keys(filters).forEach((filterName) => {
-    config.addFilter(filterName, filters[filterName]);
+
+  config.addFilter('dateToFormat', function (date, format) {
+    return DateTime.fromJSDate(date, {zone: 'utc'}).toFormat(String(format));
+  });
+
+  config.addFilter('dateToISO', function (date) {
+    return DateTime.fromJSDate(date, {zone: 'utc'}).toISO({
+      includeOffset: false,
+      suppressMilliseconds: true
+    });
+  });
+
+  config.addFilter('limit', function (arr, limit) {
+    return arr.slice(0, limit);
+  });
+
+  config.addFilter('svgContent', function (file) {
+    let relativeFilePath = `${buildDir}/${file}`;
+    if (path.extname(file) != '.svg') {
+      throw new Error('svg-contents requires a filetype of svg');
+    }
+    let data = fs.readFileSync(relativeFilePath, function (err, contents) {
+      if (err) {
+        throw new Error(err);
+      }
+
+      return contents;
+    });
+    return data.toString('utf8');
   });
 
   // Transforms
-  Object.keys(transforms).forEach((transformName) => {
-    config.addTransform(transformName, transforms[transformName]);
+
+  config.addTransform('htmlmin', function (content, outputPath) {
+    if (shouldTransformHTML(outputPath)) {
+      return htmlmin.minify(content, {
+        useShortDoctype: true,
+        removeComments: true,
+        collapseWhitespace: true
+      });
+    }
+    return content;
+  });
+
+  config.addTransform('critical', async function (content, outputPath) {
+    if (shouldTransformHTML(outputPath) && isHomePage(outputPath)) {
+      try {
+        const config = {
+          base: `${buildDir}/`,
+          html: content,
+          inline: true,
+          width: 1280,
+          height: 800
+        };
+        const {html} = await critical.generate(config);
+        return html;
+      } catch (err) {
+        console.error(err);
+      }
+    }
+    return content;
   });
 
   // Watch sass folder for changes
@@ -48,6 +113,9 @@ module.exports = function (config) {
   config.addPassthroughCopy('src/site.webmanifest');
   config.addPassthroughCopy('src/assets/images');
   config.addPassthroughCopy('src/assets/fonts');
+  config.addPassthroughCopy('src/blog/**/*.svg');
+
+  config.setDataDeepMerge(true);
 
   // Base Config
   return {

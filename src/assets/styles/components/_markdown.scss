@@ -1,4 +1,8 @@
 .markdown {
+  &__content {
+    max-width: 48rem;
+  }
+
   h2,
   h3 {
     margin-top: 0.25rem;
@@ -52,5 +56,8 @@
     @include hover-focus {
       color: var(--color-primary);
     }
+  }
+  li {
+    margin: 0.75rem 0;
   }
 }

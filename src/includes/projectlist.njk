@@ -1,6 +1,6 @@
 <ol reversed class="list" start="{{ projectlist.length }}">
   {% for project in projectlist | reverse %}
-    <li class="list__item {% if post.data.draft %}list__item--draft{% endif %}" >
+    <li class="list__item {% if project.data.draft %}list__item--draft{% endif %}" >
       <h3 class="list__title">
         <a href="{{ project.url | url }}" class="list__link" rel="bookmark">
           {{ project.data.title }}

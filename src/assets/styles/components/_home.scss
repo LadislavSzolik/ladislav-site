@@ -7,13 +7,13 @@
   &__title {
     font-size: 3.5rem;
     font-weight: 700;
-    letter-spacing: -0.05rem;
+    letter-spacing: -0.04rem;
     color: var(--color-primary);
   }
   &__subtitle {
-    font-size: 1.75rem;
-    font-weight: 600;
-    letter-spacing: 0.09rem;
+    font-size: 1.65rem;
+    font-weight: 400;
+    letter-spacing: 0.19rem;
     color: var(--color-secondary);
   }
   @include mq-down(lg) {

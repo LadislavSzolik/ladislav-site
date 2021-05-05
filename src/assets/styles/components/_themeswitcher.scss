@@ -1,0 +1,19 @@
+.themeswitcher {
+  &__btn {
+    background-color: transparent;
+    border: 0;
+    padding: 0;
+  }
+
+  &__icon {
+    display: none;
+  }
+
+  [data-theme='dark'] &__dark {
+    display: block;
+  }
+
+  [data-theme='light'] &__light {
+    display: block;
+  }
+}

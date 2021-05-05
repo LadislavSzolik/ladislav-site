@@ -39,6 +39,7 @@ module.exports = function (config) {
     return arr.slice(0, limit);
   });
 
+  /*
   config.addFilter('svgContent', function (file) {
     let relativeFilePath = `${buildDir}/${file}`;
     if (path.extname(file) != '.svg') {
@@ -52,7 +53,7 @@ module.exports = function (config) {
       return contents;
     });
     return data.toString('utf8');
-  });
+  }); */
 
   // Transforms
 
@@ -113,7 +114,7 @@ module.exports = function (config) {
   config.addPassthroughCopy('src/site.webmanifest');
   config.addPassthroughCopy('src/assets/images');
   config.addPassthroughCopy('src/assets/fonts');
-  config.addPassthroughCopy('src/blog/**/*.svg');
+  config.addPassthroughCopy('src/assets/icons');
 
   config.setDataDeepMerge(true);
 

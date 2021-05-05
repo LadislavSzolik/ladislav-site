@@ -60,4 +60,14 @@
   li {
     margin: 0.75rem 0;
   }
+
+  blockquote {
+    padding-left: 1rem;
+    margin-top: 1.7rem;
+    margin-bottom: 1.7rem;
+    font-style: italic;
+    color: var(--color-text-offset);
+    border-left: solid var(--color-bg-offset);
+    border-left-width: 0.5rem;
+  }
 }

@@ -8,6 +8,9 @@
 
     <link rel="stylesheet" as="style" href="{{ '/assets/styles/main.css' | url }}">
 
+    <script>
+      (localStorage.getItem('theme')) && document.documentElement.setAttribute('data-theme', localStorage.getItem('theme'))
+    </script>
     {% include "meta.njk" %}
   </head>
   <body>

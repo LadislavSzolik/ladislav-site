@@ -11,15 +11,15 @@ excerpt: Designing and developing an online carwash booking app with onine payme
 - [Creating design system](#creating-design-system)
 - [Results](#results)
 
-## Starting the project
-
-### Brief
+## Project brief
 
 - **Client:** A small startup consist of two people
 - **Problem statement:** The startup is an environmental friendly initiative which aims to reduce water usage and remove the chore of car washing. Part of the vision was to go full digital and let their client book and pay online.
 - **The goal:** Design and develop a responsive web app for the customers and for them as admin interface.
 - **Timeline:** 10.08.2020 - 24.11.2020 (side project)
 - **Team**: My role was to analyse and develop the solution. Two people from client side helped to clarify the requirements.
+
+## Starting the project
 
 ### Challenges
 

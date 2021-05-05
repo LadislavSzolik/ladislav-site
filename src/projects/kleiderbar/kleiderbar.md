@@ -5,66 +5,59 @@ excerpt: Prototying a navite iOS app for second hand inventory management
 
 ## Table of Content
 
-- [Project brief](#defining-the-brief)
-- [Initial designs](#initial-designs)
-- [Iterations](#iterations-on-landing-page)
+- [Define the brief](#defining-the-brief)
+- [Initial concepts](#initial-concepts)
+- [Iterations](#iterations)
 - [Results](#results)
 
-## Project brief
+## Define the brief
 
-### Client
+- **Client:** Owner of a children clothes second-hand shop.
+- **Problem statement:** Paper only inventory system requires time and effort to maintain. This often leads to stress and loss of clients.
+- **The goal:** Create an inventory system which helps my client to easily receive, sell and return second-hand goods
+- **Timeline:** The client had no specific timeline.
+- **Team**: I was a sole designer & developer, responsible for product discovery together with the client.
+- **Deliverables**: Native iOS prototype app with key features
 
-Owner of a children clothes second-hand shop
-
-### Scope
-
-## Starting the project
+## Initial concepts
 
 ### Challenges
 
-1. Infrastructure setup
-2. Business requirements
-3. Credit card payment integration
-4. Booking system from scratch
+- The client uses digital devices only for basic tasks (calls, instant messages)
+- It was hard for her to imagine the mobile app from a picture in inVision
 
 ### Solutions
 
-1. First I tried to use already existing CMS (Content Management System) tools like WIX or Wordpress. Due to the very custom requirements I decided to build it using Laravel the PHP framework. The framework offers many built in features which speeded up development.
-2. I noticed early that high level discussions about requirements weren’t effective with the client. Neither wireframes nor UI mockups communicted well. The developed sites with minimalistic design and no database were the solution to make progress.
-3. Due to the pandemic the client wanted online payment instead of cash. After two weeks of research we end up using Datatrans as a payment service provider.
-4. Non of the Wordpress plugins were flexible enough to create the wished booking system. Thanks to the PHP framework I could develop it from scratch.
+In the first prototype I validated the followings:
+
+- Manually enter customer details
+- Add clothes types from list
+- Scan the printed QR-code to pair it with the received clothes.
 
 ### Leasons learned
 
-Web frameworks evolved to the level, where a developer can faster ship solution without the need for paid site creators. Each framework has a learning curve and opinion about architecture. To find a right framework for a task is also not easy. It is critical to understand the underlying core technolgoies to be able utilize such a solution.
+It is not sufficient to print only the QR-code as clothes label. The client uses label information for orientation, e.g. date of arrival, size, customer.
 
-## Iterations on landing page
+## Iterations
 
-### Landing page content
+### Capture new items
 
-The frist version of the business content was a simple MS Word document. This was the tool the client was confortable with. It was adapted and shared in a mail chain.
+We focused on the capture flow as it has many different interaction points. We tested three different concepts to discover the most efficient way to perform this task.
 
 ### Leasons learned
 
-I tried to move towards google docs to avoid communication overhead. In the end I failed and needed to respect the tool with which the client was comfortable.
-
-## Creating design system
-
-### Stylesheet framework
-
-Yet an another framework. To speed up user interface development I used Tailwind CSS. It offers ready made components and integrates well with the PHP framework.
-
-### Desiging for desktop and mobile
-
-The web application is responsive. In the booking order form and the table views adapting to the corresponding form factor.
+From the interviews and the usability test observations I learned that most important part of client’s workflow is quickly recording all the received clothes. The number of newly arrived clothes can be really high (100). In the next iterations I was trying to make this step as easy as possible.
 
 ## Results
 
-### Getting feedback
+### The problem with mobile apps
 
-We tested the web app with several people. Thanks to simple UI components, we got a positive feedback on the usability. The startup at the time of this documentation is still in an early stage and the app is a subject for change. It will be interesting to see how the project develops in the future.
+In the end of the design process we discovered that the client does not feel comfortable using a mobile phone to manage her business. One of the core reason is the lack of trusing technology.
 
-### Key takeaways
+### Simplified workflow
 
-- I learned that static high fidelity designs in an web app with heavy interaction requirments was slowing down our progress
-- Clarity in communication is key to move the project forward. As each person is different, the first part of the project should be about finding the common way of talking to each other.
+Still our effort was not wasted as we disocvered a simpler label printing method.
+
+> It was an interesting procedure. I never thought that I will also learn so much about my work and to find problems about which I was not aware.
+
+_Second-hand shop owner_

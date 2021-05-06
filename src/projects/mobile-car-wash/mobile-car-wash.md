@@ -3,7 +3,7 @@ title: The mobile car wash
 excerpt: Designing and developing an online carwash booking app with onine payments.
 ---
 
-## Table of Content
+**Table of Content**
 
 - [Project brief](#defining-the-brief)
 - [Starting the project](#starting-the-project)

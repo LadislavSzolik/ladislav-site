@@ -3,7 +3,7 @@ title: Kleiderbar (Dressbar)
 excerpt: Prototying a navite iOS app for second hand inventory management
 ---
 
-## Table of Content
+**Table of Content**
 
 - [Define the brief](#defining-the-brief)
 - [Initial concepts](#initial-concepts)

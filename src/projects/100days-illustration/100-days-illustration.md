@@ -3,11 +3,11 @@ title: 100 days of illustrations
 excerpt: This personal project focuses on disciplines and making beautiful vector illustrations.
 ---
 
-## Introduction
-
-<img src="/assets/images/projects/100days/bestselection.png" loading="lazy" alt="Best of illustrations">
+{% image './src/assets/raw-images/100days/bestselection.png', 'Best of illustrations', '(max-width: 480px) 100vw, 48rem' %}
 
 <em>My favorite illustrations, see [Behance](https://www.behance.net/gallery/85507617/100-illustration-in-100-days) for full list</em>
+
+## Introduction
 
 It is inspiring to see how many creatives embark on this journey. I wanted to deepen my drawing skills and challenge myself with 100 days of creative work. I chose vector illustrations done in Adobe Illustrator and later I switched to simple raster drawings done with procreate iPad app.
 
@@ -23,5 +23,6 @@ It is inspiring to see how many creatives embark on this journey. I wanted to de
 - Magic happens when you perform an activity over and over again. In my case I became very fluent in sketching and using AI.
 - I was a bit late in this game. Many other people did it before me, therefore it was hard to get feedback.
 
-<img loading="lazy" src="/assets/images/projects/100days/chess.svg" alt="Chess game illustration">
+{% image './src/assets/raw-images/100days/chess.svg', 'Chess game illustration', '(max-width: 480px) 100vw, 48rem' %}
+
 <em>A young and old person playing chess</em>

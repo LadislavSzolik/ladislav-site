@@ -1,17 +1,16 @@
 const pluginRss = require('@11ty/eleventy-plugin-rss');
 const pluginNavigation = require('@11ty/eleventy-navigation');
+const Image = require('@11ty/eleventy-img');
 const markdownIt = require('markdown-it');
 const markdownItAnchor = require('markdown-it-anchor');
 const {DateTime} = require('luxon');
 const htmlmin = require('html-minifier');
 const critical = require('critical');
 
-const fs = require('fs');
-const path = require('path');
 const buildDir = 'dist';
-
 const isHomePage = (outputPath) => outputPath === `${buildDir}/index.html`;
 process.setMaxListeners(Infinity);
+
 const shouldTransformHTML = (outputPath) =>
   outputPath &&
   outputPath.endsWith('.html') &&
@@ -38,22 +37,6 @@ module.exports = function (config) {
   config.addFilter('limit', function (arr, limit) {
     return arr.slice(0, limit);
   });
-
-  /*
-  config.addFilter('svgContent', function (file) {
-    let relativeFilePath = `${buildDir}/${file}`;
-    if (path.extname(file) != '.svg') {
-      throw new Error('svg-contents requires a filetype of svg');
-    }
-    let data = fs.readFileSync(relativeFilePath, function (err, contents) {
-      if (err) {
-        throw new Error(err);
-      }
-
-      return contents;
-    });
-    return data.toString('utf8');
-  }); */
 
   // Transforms
 
@@ -85,6 +68,26 @@ module.exports = function (config) {
       }
     }
     return content;
+  });
+
+  // Shortcodes
+
+  config.addNunjucksAsyncShortcode('image', async function (src, alt, sizes) {
+    let metadata = await Image(src, {
+      widths: [480, 700],
+      formats: [null],
+      urlPath: '/assets/images/',
+      outputDir: './src/assets/images'
+    });
+
+    let imageAttributes = {
+      alt,
+      sizes,
+      loading: 'lazy',
+      decoding: 'async'
+    };
+
+    return Image.generateHTML(metadata, imageAttributes);
   });
 
   // Watch sass folder for changes

@@ -1,22 +1,27 @@
 <ol reversed class="list" start="{{ projectlist.length }}">
   {% for project in projectlist | reverse %}
-    <li class="list__item {% if project.data.draft %}list__item--draft{% endif %}" >
-      <h3 class="list__title">
-        <a href="{{ project.url | url }}" class="list__link" rel="bookmark">
-          {{ project.data.title }}
+    <li class="card" >
+      <article class="card__base">
+        <a href="{{ project.url | url }}" tabindex="-1" aria-hidden="true">
+          <figure class="card__figure">
+            {% image project.data.cover,
+            project.data.excerpt,
+            'card__image' %}
+          </figure>
         </a>
-      </h3>
-      <div class="list__meta">
-        {% if project.data.draft %}
-          <span aria-hidden="true">&sdot;</span>
-          <span class="list__status">(Draft)</span>
-        {% endif %}
-      </div>
-      <p class="page__excerpt">
-        {% if project.data.excerpt %}
-          {{ project.data.excerpt }}
-        {% endif %}
-      </p>
+
+        <div>
+          <a class="card__link" href="{{ project.url | url }}">
+            {{ project.data.title }}
+          </a>
+
+          <p class="card__meta">
+            {% if project.data.excerpt %}
+              {{ project.data.excerpt }}
+            {% endif %}
+          </p>
+        </div>
+      </article>
     </li>
   {% endfor %}
 </ol>

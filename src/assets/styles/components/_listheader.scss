@@ -1,0 +1,12 @@
+.list-header {
+  margin-top: 1rem;
+  margin-bottom: 2rem;
+
+  &__title {
+    font-weight: 800;
+    color: var(--color-text-offset);
+  }
+  &__desc {
+    color: var(--color-text-meta);
+  }
+}

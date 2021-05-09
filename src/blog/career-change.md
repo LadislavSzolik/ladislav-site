@@ -1,8 +1,9 @@
 ---
 title: What do I need for a career change?
 excerpt: Years back I had few assumptions about changing my career. I revisited and evaluated those assumptions.
-image: cover.svg
 date: 2021-02-13
+image: /assets/images/articles/article_3.svg
+cover: ux-job
 ---
 
 A short list of my initial assumptions at the beginning of my career change from Software Engineer to UX Designer. Plus comments about how I see things today:

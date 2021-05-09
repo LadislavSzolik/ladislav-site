@@ -1,7 +1,9 @@
 ---
-title: 'Web framework dilemma'
+title: 'Just too many frameworks'
 excerpt: There are just too many. I got recently extra anxious about this topic.
+image: /assets/images/articles/article_2.svg
 date: 2021-02-06T16:56:15+02:00
+cover: www:'(
 ---
 
 I recently built a web app for a friend.

@@ -1,0 +1,26 @@
+.profile {
+  margin-top: 3rem;
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+
+  &__pic {
+    height: 180px;
+    width: auto;
+    clip-path: circle(90px at center);
+    margin-left: -30px;
+
+    @include mq-down(lg) {
+      margin-bottom: 2rem;
+    }
+  }
+  &__desc {
+    color: var(--color-text);
+    .title {
+      margin-bottom: 0.5rem;
+    }
+    .details {
+      color: var(--color-text-offset);
+    }
+  }
+}

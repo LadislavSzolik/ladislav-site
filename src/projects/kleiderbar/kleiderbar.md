@@ -1,63 +1,65 @@
 ---
-title: Kleiderbar (Dressbar)
-excerpt: Prototying a navite iOS app for second hand inventory management
+title: Kleiderbar iOS app
+excerpt: Digital inventory for a second-hand shop written in Swift.
+cover: ./src/assets/raw-images/kleiderbar/kleiderbar_app.jpg
+date: 2020-08-13
 ---
 
 **Table of Content**
 
-- [Define the brief](#defining-the-brief)
-- [Initial concepts](#initial-concepts)
+- [Introduction](#introduction)
+- [Starting the project](#starting-the-project)
+- [Validating the first ideas](#validating-the-first-ideas)
 - [Iterations](#iterations)
-- [Results](#results)
+- [Conclusion](#conclusion)
 
-## Define the brief
+## Introduction
 
-- **Client:** Owner of a children clothes second-hand shop.
-- **Problem statement:** Paper only inventory system requires time and effort to maintain. This often leads to stress and loss of clients.
-- **The goal:** Create an inventory system which helps my client to easily receive, sell and return second-hand goods
-- **Timeline:** The client had no specific timeline.
-- **Team**: I was a sole designer & developer, responsible for product discovery together with the client.
-- **Deliverables**: Native iOS prototype app with key features
+### Who is it for?
 
-## Initial concepts
+- A second-hand children shop owner.
+- The price tags for the clothes are handwritten. She feels in control and satisfaction after doing all these handy work.
+- She spends her evenings and weekends with tags writing and inventory. Manual work which can be automated.
 
-### Challenges
+### What is it for?
 
-- The client uses digital devices only for basic tasks (calls, instant messages)
-- It was hard for her to imagine the mobile app from a picture in inVision
+- The Kleiderbar iOS mobile app helps her to free up time, so that she can focus on growing and sustaining her business.
 
-### Solutions
+## Starting the project
 
-In the first prototype I validated the followings:
+From the shop visits I learned about her environment and workflow.
 
-- Manually enter customer details
-- Add clothes types from list
-- Scan the printed QR-code to pair it with the received clothes.
+Observations to note:
 
-### Leasons learned
+- The most stressful moment is when a client, a person who brought the clothes to the store, wants back the remaining, not sold items. It is difficult to recollect those items.
+- She uses the clothes tags as her primary orientation tool. For example, in one group she sorts the clothes based on date of arrival.
+- She has no interest about digital devices, therefore often faces issues
 
-It is not sufficient to print only the QR-code as clothes label. The client uses label information for orientation, e.g. date of arrival, size, customer.
+{% image './src/assets/raw-images/kleiderbar/kleiderbar_shop.jpeg', 'In the second-hand shop'%}
+
+## Validating the first ideas
+
+Static screen prototypes helped me to visualize concepts, but they did not yield results when I tested with her. Clickable, interactive prototypes were the way to go.
+
+Apple's Swift UI library gave me the platform to create prototypes quickly. I installed each prototype directly on her phone, so she can experience it in a natural setup.
+
+The first version validated the followings:
+
+- enter new client in the system
+- assign the client's clothes
+- assign pre printed QR codes tags to these clothes
+
+### Lessons learned
+
+- Only QR code as a label replacement is not enough. Date of arrival, size, client name are essential for orientation.
+- Using large amount of input fields, where she needs to type, was not accepted.
 
 ## Iterations
 
-### Capture new items
+The next interations focused on eliminating manual typing:
 
-We focused on the capture flow as it has many different interaction points. We tested three different concepts to discover the most efficient way to perform this task.
+{% image './src/assets/raw-images/kleiderbar/kleiderbar_app.jpg', 'App iterations' %}
 
-### Leasons learned
+## Conclusion
 
-From the interviews and the usability test observations I learned that most important part of client’s workflow is quickly recording all the received clothes. The number of newly arrived clothes can be really high (100). In the next iterations I was trying to make this step as easy as possible.
-
-## Results
-
-### The problem with mobile apps
-
-In the end of the design process we discovered that the client does not feel comfortable using a mobile phone to manage her business. One of the core reason is the lack of trusing technology.
-
-### Simplified workflow
-
-Still our effort was not wasted as we disocvered a simpler label printing method.
-
-> It was an interesting procedure. I never thought that I will also learn so much about my work and to find problems about which I was not aware.
-
-_Second-hand shop owner_
+At the end of the design process the client decided to not go for a mobile solution due to small screen size of the mobiles in general. However the newly designed labels without QR were the new way of labelling instead of writing them mannually.

@@ -13,13 +13,10 @@
   }
 
   &__subtitle {
-    padding: 1rem 0;
+    margin-top: 3rem;
   }
 
   &__excerpt {
     color: var(--color-text-offset);
-    .page__item--draft & {
-      opacity: 0.5;
-    }
   }
 }

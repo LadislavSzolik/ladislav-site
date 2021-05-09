@@ -6,17 +6,28 @@ eleventyNavigation:
 permalink: /
 ---
 
-<div class="container">
+<div class="container home ">
   <header class="home__header">
-    <h1 class="home__title">Hi, I am ladislav</h1>
-    <p class="home__subtitle">app designer & developer </p>
+    <h1 class="home__title">hi, I am ladislav</h1>
+    <p class="home__subtitle">I design and develop digital solutions</p>
   </header>
 
-  <h2 class="page__subtitle" >Blog </h2>
+  <div class="list-header">
+    <h2 class="list-header__title">See my work</h2>
+    <p class="list-header__desc">Here you can explore some of my projects.</p>
+  </div>
+  {%- set projectlist = collections.projects | limit(3) -%}
+  {% include "projectlist.njk" %}
+
+  <a class="home__link" href="/project/">View all projects &#8594;</a>
+
+  <div class="list-header">
+    <h2 class="list-header__title">Read my thoughts</h2>
+    <p class="list-header__desc">Read about my thoughts about industry, design and life in general.</p>
+  </div>
   {%- set bloglist = collections.blog | limit(3) -%}
   {% include "bloglist.njk" %}
 
-  <h2 class="page__subtitle">Projects</h2>
-  {%- set projectlist = collections.projects | limit(3) -%}
-  {% include "projectlist.njk" %}
+  <a class="home__link" href="/blog/">View all posts &#8594;</a>
+
 </div>

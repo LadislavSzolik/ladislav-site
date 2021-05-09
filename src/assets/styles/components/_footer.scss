@@ -3,4 +3,15 @@
   padding: $spacing-y 0;
   text-align: center;
   color: var(--color-text-meta);
+
+  &__social {
+    &__link {
+      text-decoration: none;
+      padding: 0.5rem;
+    }
+
+    path {
+      fill: var(--color-text-meta);
+    }
+  }
 }

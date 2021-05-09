@@ -1,6 +1,8 @@
 ---
-title: The mobile car wash
+title: Booking web app
 excerpt: Designing and developing an online carwash booking app with onine payments.
+cover: ./src/assets/raw-images/mobile_carwash/booking_overview.jpg
+date: 2020-09-13
 ---
 
 **Table of Content**

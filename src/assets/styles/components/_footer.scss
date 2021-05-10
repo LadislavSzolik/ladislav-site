@@ -5,9 +5,18 @@
   color: var(--color-text-meta);
 
   &__social {
+    display: flex;
+    justify-content: center;
+
     &__link {
       text-decoration: none;
+
       padding: 0.5rem;
+
+      &__desc {
+        display: block;
+        color: var(--color-text-meta);
+      }
     }
 
     path {

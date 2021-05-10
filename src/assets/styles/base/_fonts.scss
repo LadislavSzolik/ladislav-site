@@ -27,17 +27,10 @@
 */
 
 @font-face {
-  font-family: 'iAWriterMono';
+  font-family: 'iAWriterMonoS-Regular';
   font-style: normal;
   font-display: swap;
   font-weight: 500;
-  src: url('/assets/fonts/iAWriterMonoS-Regular.woff2') format('woff2');
-}
-
-@font-face {
-  font-family: 'iAWriterMono';
-  font-style: normal;
-  font-display: swap;
-  font-weight: 500;
-  src: url('/assets/fonts/iAWriterMonoS-Regular.woff') format('woff');
+  src: url('/assets/fonts/iAWriterMonoS-Regular.woff') format('woff'),
+    url('/assets/fonts/iAWriterMonoS-Regular.woff2') format('woff2');
 }

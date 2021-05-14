@@ -1,0 +1,19 @@
+backend:
+  name: git-gateway
+  repo: https://github.com/LadislavSzolik/ladislav-site
+  branch: master
+  base_url: https://ladislavszolik.com
+  auth_endpoint: api/auth
+media_folder: 'assets/raw-images'
+public_foler: '/assets/images'
+collections:
+  - name: 'blog'
+    label: 'Blog'
+    folder: 'blog'
+    create: true
+    slug: '{{slug}}'
+    fields:
+      - {label: 'Layout', name: 'layout', widget: 'hidden', default: 'single'}
+      - {label: 'Title', name: 'title', widget: 'string'}
+      - {label: 'Publish Date', name: 'date', widget: 'datetime'}
+      - {label: 'Body', name: 'body', widget: 'markdown'}

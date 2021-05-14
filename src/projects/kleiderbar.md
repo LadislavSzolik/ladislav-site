@@ -2,7 +2,7 @@
 title: Kleiderbar iOS app
 excerpt: Digital inventory for a second-hand shop written in Swift.
 cover: ./src/assets/raw-images/kleiderbar/kleiderbar_app.jpg
-date: 2020-08-13
+date: 2018-08-13
 ---
 
 **Table of Content**

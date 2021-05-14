@@ -37,7 +37,9 @@ module.exports = function (config) {
   });
 
   config.addFilter('limit', function (arr, limit) {
-    return arr.slice(0, limit);
+    const length = arr.length;
+    const diff = length - limit;
+    return arr.slice(diff, length);
   });
 
   config.addFilter('svgContent', function (file) {
@@ -116,6 +118,35 @@ module.exports = function (config) {
     }
   );
 
+  /*
+  config.addNunjucksShortcode('notionblock', function (block) {
+    const transformText = (text) => {
+      if (!text) {
+        return null;
+      }
+      return text.map((value) => {
+        const {
+          annotations: {bold, code, color, italic, strikethrough, underline},
+          text
+        } = value;
+        return text.content;
+      });
+    };
+
+    const {type, id} = block;
+    const value = block[type];
+    switch (type) {
+      case 'heading_1':
+        return `<h1>${transformText(value.text)}</h1>`;
+        break;
+      case 'paragraph':
+        return `<p>${transformText(value.text)}</p>`;
+        break;
+      default:
+        return `<p>not found</p>`;
+    }
+  });*/
+
   // Watch sass folder for changes
   config.addWatchTarget('./src/assets');
 
@@ -144,6 +175,9 @@ module.exports = function (config) {
   config.addPassthroughCopy('src/assets/images');
   config.addPassthroughCopy('src/assets/fonts');
   config.addPassthroughCopy('src/assets/icons');
+
+  config.addPassthroughCopy('src/admin');
+  config.addPassthroughCopy('src/api');
 
   config.setDataDeepMerge(true);
 

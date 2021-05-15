@@ -97,21 +97,22 @@ module.exports = function (config) {
       src,
       alt,
       cls = '',
-      sizes = '(max-width: 480px) 100vw, 48rem'
+      sizes = '(max-width: 480px) 708px, 1600px'
     ) {
       let metadata = await Image(src, {
-        widths: [480, 700],
+        widths: [708, 1600],
         formats: [null],
         urlPath: '/assets/images/',
         outputDir: './src/assets/images'
       });
 
       let imageAttributes = {
+        sizes,
         class: cls,
         alt,
-        sizes,
         loading: 'lazy',
-        decoding: 'async'
+        decoding: 'async',
+        useCache: false
       };
 
       return Image.generateHTML(metadata, imageAttributes);
@@ -176,8 +177,9 @@ module.exports = function (config) {
   config.addPassthroughCopy('src/assets/fonts');
   config.addPassthroughCopy('src/assets/icons');
 
-  config.addPassthroughCopy('src/admin');
-  config.addPassthroughCopy('src/api');
+  // NOTE: this was for Netlify CMS integration, but did not work.
+  //config.addPassthroughCopy('src/admin');
+  //config.addPassthroughCopy('src/api');
 
   config.setDataDeepMerge(true);
 

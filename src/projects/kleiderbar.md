@@ -1,11 +1,15 @@
 ---
 title: Kleiderbar iOS app
 excerpt: Digital inventory for a second-hand shop written in Swift.
-cover: ./src/assets/raw-images/kleiderbar/kleiderbar_app.jpg
+cover: ./src/assets/raw-images/kleiderbar/cover.jpg
 date: 2018-08-13
 ---
 
-**Table of Content**
+_Published on {{date | dateToFormat('yyyy-MM-dd')}}_
+
+{% image './src/assets/raw-images/kleiderbar/cover.jpg', 'App iterations' %}
+
+## Table of content
 
 - [Introduction](#introduction)
 - [Starting the project](#starting-the-project)
@@ -56,9 +60,7 @@ The first version validated the followings:
 
 ## Iterations
 
-The next interations focused on eliminating manual typing:
-
-{% image './src/assets/raw-images/kleiderbar/kleiderbar_app.jpg', 'App iterations' %}
+The next interations focused on eliminating manual typing.
 
 ## Conclusion
 

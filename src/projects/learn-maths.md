@@ -1,80 +1,101 @@
 ---
 title: Learn maths online
 excerpt: Web app made for children to practice maths
-cover: ./src/assets/raw-images/kleiderbar/kleiderbar_app.jpg
+cover: ./src/assets/raw-images/learn-maths/cover.jpg
 date: 2015-08-13
 ---
 
-**Table of Content**
+_Published on {{date | dateToFormat('yyyy-MM-dd')}}_
+
+{% image './src/assets/raw-images/learn-maths/cover.jpg', 'High fidelity design' %}
+
+## Table of content
 
 - [Introduction](#introduction)
-- [Starting the project](#starting-the-project)
-- [Validating the first ideas](#validating-the-first-ideas)
+- [Research](#research)
+- [Early designs](#early-designs)
 - [Iterations](#iterations)
 - [Conclusion](#conclusion)
 
 ## Introduction
 
-### Who is it for?
+### Problem statment
 
-- Children who require extra practice and visiting elementary school in Switzerland.
-- They have access to a tablet or a desktop computer.
+- It is common not only in Switzerland, but in many other countries that elementary students face a lot of challenges with mathematics. This situation results in ignorance and losing of interesting in the subject.
+- The goal of the project is to enable children visualise and practice common mathematical challenges
 
-### What is it for?
+### Role(s) played
 
-- Enable children to easily visualize and practice mathematical challenges.
+- UX Designer, Frontend Engineer
+
+### Activities performed
+
+- Ideation workshops
+- Wire-framing
+- Design High-fidelity mockups (using SketchApp)
+- Develop interactive prototype for Tablet devices
 
 ### Links
 
 - Live demo site: https://maths-on-tablet.netlify.app/
 - Github code: https://github.com/LadislavSzolik/maths-lessons-typescript
 
-## Starting the project
+## Research
 
-My colleague, who worked previously as a teacher, wanted to help children from elementary schools with maths. This subject is difficult for a lot of kids and we believed that practice would improve this situation.
+### Initial hypothesis
 
-We wanted to create a collection of exercises. The level of inesity was taken from the official mathematics book used in Zurich, Switzerland.
+1. Parents are open to try out online solution, which is addition to the class lessons.
+2. With better visualisation and interactivity children will be able to grasp maths faster.
+3. Parents would like to have better overview about how their children improves in maths.
 
-// image with the book comes here
+### Market research
 
-### Requirments
+- We found many general apps for maths
+- We conducted interviews with local teachers and parents to get better understanding about the situation
+- Our identified market opportunity was the additional metrics about the students performance
 
-- Requirments specifications were created by the teacher using Google Slides.
-- High fidelity mockups were produced with Sketch app.
+### Personas
 
-// image from the requirements
+- **Lisa** The parent, who wants her child to succeed. She keeps herself informed about new studying methods.
+- **Rafael** The 4th grade student, who struggles to understand subtractions with multi-digit number.
 
-### Technology used
+## Early designs
 
-- AngularJS (1.5) as frontend framework, written in Typescript
-- Bootstrap CSS
-- Supporting libraries: JQuery touch as we were targeting tablet devices
+- In the team we had one person who worked previously as a teacher. His domain knowledge and connections gave us insights which we could incorporate into the application.
+- We started with the scope of the exercises. These specifications were minimalistic and produced with the help of Google Docs. Our goal was to narrow the concepts we want to cover.
 
-{% image './src/assets/raw-images/kleiderbar/kleiderbar_shop.jpeg', 'In the second-hand shop'%}
+{% image './src/assets/raw-images/learn-maths/entry_screen.png', 'Entry screen wireframe' %}
 
-## Validating the first ideas
+_First wireframe with the exercise overview_
 
-Static screen prototypes helped me to visualize concepts, but they did not yield results when I tested with her. Clickable, interactive prototypes were the way to go.
+- Once we had the scope, we ideated on the different type of exercises. For example how might we make fun adding numbers together.
 
-Apple's Swift UI library gave me the platform to create prototypes quickly. I installed each prototype directly on her phone, so she can experience it in a natural setup.
+{% image './src/assets/raw-images/learn-maths/exercise_specifications.png', 'Exercise specifications' %}
 
-The first version validated the followings:
-
-- enter new client in the system
-- assign the client's clothes
-- assign pre printed QR codes tags to these clothes
+_Defining the different types of exercises_
 
 ### Lessons learned
 
-- Only QR code as a label replacement is not enough. Date of arrival, size, client name are essential for orientation.
-- Using large amount of input fields, where she needs to type, was not accepted.
+- Having somebody with domain knowledge reduces the feedback loop and allowed us to move fast.
 
 ## Iterations
 
-The next interations focused on eliminating manual typing:
+- Each exercise was first designed using Sketchapp, shared with the team and implemented as clickable prototype.
 
-{% image './src/assets/raw-images/kleiderbar/kleiderbar_app.jpg', 'App iterations' %}
+{% image './src/assets/raw-images/learn-maths/design_iterations.png', 'Screen design iterations' %}
+
+_Showcasing different type of exercises_
+
+### Lessons learned
+
+- The first usability tests revealed that for an app (like ours) with rich interactions, the static screen based prototype produced less insights than the later developed clickable prototype.
 
 ## Conclusion
 
-At the end of the design process the client decided to not go for a mobile solution due to small screen size of the mobiles in general. However the newly designed labels without QR were the new way of labelling instead of writing them mannually.
+The product did not evolve further than a prototype due to multiple factors:
+
+1. We haven’t got support from the school system
+2. Interviews with parents revealed the lack of interest in investing into a solution like this.
+3. The team had a challenge to continue working on the project.
+
+This project helped me to develop my design and front end engineering skills. It though me how to rapidaly create clickable prototypes, and to learn what functionality is enough to get results.

@@ -5,6 +5,10 @@ cover: ./src/assets/raw-images/mobile_carwash/booking_overview.jpg
 date: 2020-09-13
 ---
 
+_Published on {{date | dateToFormat('yyyy-MM-dd')}}_
+
+{% image './src/assets/raw-images/mobile_carwash/booking_overview.jpg', 'Screens from implementation' %}
+
 **Table of Content**
 
 - [Project brief](#defining-the-brief)

@@ -1,6 +1,6 @@
 .markdown-body {
   &__content {
-    max-width: 48rem;
+    max-width: 800px;
   }
 
   h2 {
@@ -38,8 +38,9 @@
     max-width: 100%;
     height: auto;
     margin-top: 1.5rem;
-    margin-bottom: 1rem;
-    background-color: var(--color-bg-offset);
+    margin-bottom: 0.2rem;
+    border-radius: 0.5%;
+    // border: solid 2px var(--color-bg-offset);
   }
 
   ul,

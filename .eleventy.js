@@ -111,8 +111,8 @@ module.exports = function (config) {
         class: cls,
         alt,
         loading: 'lazy',
-        decoding: 'async',
-        useCache: false
+        decoding: 'async'
+        //useCache: false
       };
 
       return Image.generateHTML(metadata, imageAttributes);

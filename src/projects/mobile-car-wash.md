@@ -1,77 +1,113 @@
 ---
 title: Carwash booking app
-excerpt: Designing and developing an online carwash booking app with onine payments.
+excerpt: Designing and developing an online carwash booking app with online payments.
 cover: ./src/assets/raw-images/mobile_carwash/booking_overview.jpg
-date: 2020-09-13
+date: 2021-01-21
 ---
 
 _Published on {{date | dateToFormat('yyyy-MM-dd')}}_
 
 {% image './src/assets/raw-images/mobile_carwash/booking_overview.jpg', 'Screens from implementation' %}
 
-**Table of Content**
+## Table of content
 
-- [Project brief](#defining-the-brief)
-- [Starting the project](#starting-the-project)
-- [Iterations on landing page](#iterations-on-landing-page)
-- [Creating design system](#creating-design-system)
+- [Introduction](#introduction)
+- [Research](#research)
+- [Early progress ](#early-progress)
+- [Iterations](#iterations)
 - [Results](#results)
 
-## Project brief
+## Introduction
 
-- **Client:** A small startup consist of two people
-- **Problem statement:** The startup is an environmental friendly initiative which aims to reduce water usage and remove the chore of car washing. Part of the vision was to go full digital and let their client book and pay online.
-- **The goal:** Design and develop a responsive web app for the customers and for them as admin interface.
-- **Timeline:** 10.08.2020 - 24.11.2020 (side project)
-- **Team**: My role was to analyse and develop the solution. Two people from client side helped to clarify the requirements.
+### Problem statment
 
-## Starting the project
+- A small startup saw an opportunity to provide mobile car washing services using environment friendly cleaning tools. Due to the pandemic they faced multiple challenges:
+  1. How to let people know what we do?
+  2. How to make it easy to book and pay for a car wash online?
 
-### Challenges
+### Role(s) played
 
-1. Infrastructure setup
-2. Business requirements
-3. Credit card payment integration
-4. Booking system from scratch
+- UI/UX Designer, Frontend Engineer, Backend Engineer
 
-### Solutions
+### Activities performed
 
-1. First I tried to use already existing CMS (Content Management System) tools like WIX or Wordpress. Due to the very custom requirements I decided to build it using Laravel the PHP framework. The framework offers many built in features which speeded up development.
-2. I noticed early that high level discussions about requirements weren’t effective with the client. Neither wireframes nor UI mockups communicted well. The developed sites with minimalistic design and no database were the solution to make progress.
-3. Due to the pandemic the client wanted online payment instead of cash. After two weeks of research we end up using Datatrans as a payment service provider.
-4. Non of the Wordpress plugins were flexible enough to create the wished booking system. Thanks to the PHP framework I could develop it from scratch.
+- Kick off meetings
+- Ideation sessions
+- Logo design
+- Wire-framing
+- Design High-fidelity mockups (using Figma)
+- Develop the front and backend of the application (using Laravel PHP Framework)
+- Usability test sessions
 
-### Leasons learned
+### Links
 
-Web frameworks evolved to the level, where a developer can faster ship solution without the need for paid site creators. Each framework has a learning curve and opinion about architecture. To find a right framework for a task is also not easy. It is critical to understand the underlying core technolgoies to be able utilize such a solution.
+- [Live demo site](#https://lifiluzi.myhostpoint.ch/)
+- [Github code](#https://github.com/LadislavSzolik/greenwiperz-app)
 
-## Iterations on landing page
+## Research
 
-### Landing page content
+### Initial assumptions
 
-The frist version of the business content was a simple MS Word document. This was the tool the client was confortable with. It was adapted and shared in a mail chain.
+1. Executives, managers and other people in similar role are interested in this service as it is convenient and environment friendly.
+2. They perceive car washing as chore and they are open to try out new things.
 
-### Leasons learned
+### Prioritised hypotheses
 
-I tried to move towards google docs to avoid communication overhead. In the end I failed and needed to respect the tool with which the client was comfortable.
+1. We believe that creating a landing page with explanation, benefits and transparent pricing, will help our target audience to learn about the service and to motivate them to purchase the service. We can measure the conversion rate to confirm the same.
+2. We believe that by providing online booking system with the possibility to pay online will increase the number of orders. We can test this by monitoring the system usage.
 
-## Creating design system
+### Personas
 
-### Stylesheet framework
+We interviewed 8 car owners from different backgrounds to understand their washing habits and willingness to try this service. I drafted the following persona:
 
-Yet an another framework. To speed up user interface development I used Tailwind CSS. It offers ready made components and integrates well with the PHP framework.
+- Frank
+  - He is a manager at a Swiss bank, has a family with two children.
+  - He brings his car regularly to the local car wash on Saturdays. He is trying to be as efficient as possible. He pays special attention to avoid scratches on the car.
+  - As the bank promotes sustainability funds, he started to reflect where he could be more environmental friendly.
 
-### Desiging for desktop and mobile
+## Early progress
 
-The web application is responsive. In the booking order form and the table views adapting to the corresponding form factor.
+### Infrastructure
+
+As my responsibly started from finding a hosting until implementing online payments, the first challenge was to design an infrastructure without high costs and easy to maintain.
+
+To solve this challenge I spent the first few weeks with research and trying out hosting and frameworks. As per the preference of my client, we settled for a Swiss hosting. PHP was the preinstalled and available language on the server, this narrowed down the stack. Laravel, the PHP framework proved to be suitable for creating web applications and I decided to use it.
+
+### Communication
+
+I worked with people located in different locations. The next challenge was to establish a fluent communication channels with people who are not used to collaborate remotely and preferred calls over chat.
+
+I solved it with scheduling the first kick offs in person and continue the collaboration over Discord.
+
+### Lessons learned
+
+- Web frameworks can speed up development process, however it caused me initial frustrations to fix issues. Therefore it was important to invest time to get familiar with the technology.
+- I tried to collaborate with tools like Figma or Google Docs. The client team had problem to learn and use them. Because of that reason we used the tools they are comfortable.
+
+## Iterations
+
+### Landing page
+
+{% image './src/assets/raw-images/mobile_carwash/landingpage_spec.png', 'Landing page specifications' %}
+
+_The first version of the content created using Word_
+
+{% image './src/assets/raw-images/mobile_carwash/landingpage_design.png', 'Landing page design and implementation' %}
+
+_Landing page desktop design and implementation_
+
+{% image './src/assets/raw-images/mobile_carwash/landingpage_mobile.png', 'Landing page initial mobile and final design' %}
+
+_Initial ideas on mobile landing page (left) and the result of iterations with client (right)_
 
 ## Results
 
-### Getting feedback
+### Feedback
 
-We tested the web app with several people. Thanks to simple UI components, we got a positive feedback on the usability. The startup at the time of this documentation is still in an early stage and the app is a subject for change. It will be interesting to see how the project develops in the future.
+We tested the app with several people using desktop and mobile. The startup at the time of this documentation is in an early stage and the app is a subject for change.
 
 ### Key takeaways
 
-- I learned that static high fidelity designs in an web app with heavy interaction requirments was slowing down our progress
-- Clarity in communication is key to move the project forward. As each person is different, the first part of the project should be about finding the common way of talking to each other.
+- For a single person a monolith architecture was appropriate choice, however there might be problems at later stage of the project, when multiple developers will work on the same code.
+- It was required to invest time to learn the framework and the design system used for the project, so that I can resolve unexpected issues.
+- I needed to find a way which worked best for me and for the client side. This must have higher priority over tooling.

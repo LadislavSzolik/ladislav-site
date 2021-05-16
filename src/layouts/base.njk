@@ -8,9 +8,7 @@
 
     <link rel="stylesheet" as="style" href="{{ '/assets/styles/main.css' | url }}">
 
-    {% if process.env.ELEVENTY_ENV === 'production' %}
-      <script async src="https://cdn.splitbee.io/sb.js"></script>
-    {% endif %}
+    <script async src="https://cdn.splitbee.io/sb.js"></script>
 
     <script>
       (localStorage.getItem('theme')) && document.documentElement.setAttribute('data-theme', localStorage.getItem('theme'))

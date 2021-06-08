@@ -176,6 +176,7 @@ module.exports = function (config) {
   config.addPassthroughCopy('src/assets/images');
   config.addPassthroughCopy('src/assets/fonts');
   config.addPassthroughCopy('src/assets/icons');
+  config.addPassthroughCopy('src/admin');
 
   // NOTE: this was for Netlify CMS integration, but did not work.
   //config.addPassthroughCopy('src/admin');

@@ -1,13 +1,14 @@
 ---
 title: 'Hello world'
 cover: hello!
+date: 2021-03-14
 ---
 
-This post was written using a minimalistic web app created by me. 
+This post was written using a minimalistic web app created by me.
 
-This application does only one thing. Allows me, the author to write new blogs from any device without a complex setup. When I say complex setup I mean, crazy registrations or installing million dependencies. 
+This application does only one thing. Allows me, the author to write new blogs from any device without a complex setup. When I say complex setup I mean, crazy registrations or installing million dependencies.
 
-What can the app do?  
+What can the app do?
 
 - connect to github repository using github access token
 - open any directory in any repository
@@ -18,7 +19,4 @@ Features coming soon:
 
 - being able to review the markdown
 - saving drafts
-- and other small improvements on UI and code. 
-
-
-
+- and other small improvements on UI and code.

@@ -1,15 +1,14 @@
 .profile {
-  margin-top: 3rem;
+  margin-top: 2rem;
   display: flex;
   flex-flow: row wrap;
   align-items: center;
 
   &__pic {
-    height: 180px;
-    width: auto;
+    height: auto;
+    width: 180px;
     clip-path: circle(90px at center);
-    margin-left: -30px;
-
+    margin-inline-end: 2rem;
     @include mq-down(lg) {
       margin-bottom: 2rem;
     }

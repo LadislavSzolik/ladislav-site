@@ -4,7 +4,7 @@ preview: hello!
 date: 2021-03-14
 ---
 
-This post was written using a minimalistic web app created by me.
+This post was written using a minimalistic web app I've created.
 
 This application does only one thing. Allows me, the author to write new blogs from any device without a complex setup. When I say complex setup I mean, crazy registrations or installing million dependencies.
 

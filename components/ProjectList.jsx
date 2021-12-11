@@ -1,3 +1,4 @@
+import Image from 'next/image';
 import Link from 'next/link';
 import React from 'react';
 
@@ -9,8 +10,13 @@ export default function ProjectList({ projects }) {
           key={project.title}
           className="flex flex-col rounded-lg shadow-lg overflow-hidden"
         >
-          <div className="flex-shrink-0">
-            <img className="h-48 w-full object-cover" src={project.imageUrl} alt="" />
+          <div className="flex-shrink-0 relative w-full h-48">
+            <Image
+              className="h-48 w-full object-cover"
+              src={project.imageUrl}
+              alt="Project images"
+              layout="fill"
+            />
           </div>
           <div className="flex-1 bg-white p-6 flex flex-col justify-between">
             <div className="flex-1">

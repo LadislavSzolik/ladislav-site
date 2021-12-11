@@ -10,7 +10,7 @@ export default function About() {
       <Heading1 title="About me" />
       <div className="prose prose-lg mx-auto">
         <p>
-          Thank you for checking out my website. I hope you've found something
+          Thank you for checking out my website. I hope you have found something
           interesting.
         </p>
         <p>

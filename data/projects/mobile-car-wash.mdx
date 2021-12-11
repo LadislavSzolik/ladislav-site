@@ -1,0 +1,119 @@
+---
+title: Carwash booking app
+category: Web
+preview: Designing and developing an online carwash booking app with online payments.
+imageUrl: /assets/mobile_carwash/booking_overview.jpg
+date: 2021-01-21
+---
+
+## Table of content
+
+- [Introduction](#introduction)
+- [Research](#research)
+- [Early progress ](#early-progress)
+- [Iterations](#iterations)
+- [Results](#results)
+
+## Introduction
+
+### Problem statment
+
+- A small startup saw an opportunity to provide mobile car washing services using environment friendly cleaning tools. Due to the pandemic they faced multiple challenges:
+  1. How to let people know what we do?
+  2. How to make it easy to book and pay for a car wash online?
+
+### Role(s) played
+
+- UI/UX Designer, Frontend Engineer, Backend Engineer
+
+### Activities performed
+
+- Kick off meetings
+- Ideation sessions
+- Logo design
+- Wire-framing
+- Design High-fidelity mockups (using Figma)
+- Develop the front and backend of the application (using Laravel PHP Framework)
+- Usability test sessions
+
+### Links
+
+- [Live demo site](#https://lifiluzi.myhostpoint.ch/)
+- [Github code](#https://github.com/LadislavSzolik/greenwiperz-app)
+
+## Research
+
+### Initial assumptions
+
+1. Executives, managers and other people in similar role are interested in this service as it is convenient and environment friendly.
+2. They perceive car washing as chore and they are open to try out new things.
+
+### Prioritised hypotheses
+
+1. We believe that creating a landing page with explanation, benefits and transparent pricing, will help our target audience to learn about the service and to motivate them to purchase the service. We can measure the conversion rate to confirm the same.
+2. We believe that by providing online booking system with the possibility to pay online will increase the number of orders. We can test this by monitoring the system usage.
+
+### Personas
+
+We interviewed 8 car owners from different backgrounds to understand their washing habits and willingness to try this service. I drafted the following persona:
+
+- Frank
+  - He is a manager at a Swiss bank, has a family with two children.
+  - He brings his car regularly to the local car wash on Saturdays. He is trying to be as efficient as possible. He pays special attention to avoid scratches on the car.
+  - As the bank promotes sustainability funds, he started to reflect where he could be more environmental friendly.
+
+## Early progress
+
+### Infrastructure
+
+As my responsibly started from finding a hosting until implementing online payments, the first challenge was to design an infrastructure without high costs and easy to maintain.
+
+To solve this challenge I spent the first few weeks with research and trying out hosting and frameworks. As per the preference of my client, we settled for a Swiss hosting. PHP was the preinstalled and available language on the server, this narrowed down the stack. Laravel, the PHP framework proved to be suitable for creating web applications and I decided to use it.
+
+### Communication
+
+I worked with people located in different locations. The next challenge was to establish a fluent communication channels with people who are not used to collaborate remotely and preferred calls over chat.
+
+I solved it with scheduling the first kick offs in person and continue the collaboration over Discord.
+
+### Lessons learned
+
+- Web frameworks can speed up development process, however it caused me initial frustrations to fix issues. Therefore it was important to invest time to get familiar with the technology.
+- I tried to collaborate with tools like Figma or Google Docs. The client team had problem to learn and use them. Because of that reason we used the tools they are comfortable.
+
+## Iterations
+
+### Landing page
+
+<CustomImageTag
+  url="/assets/mobile_carwash/landingpage_spec.png"
+  alt="Landing page specifications"
+/>
+
+_The first version of the content created using Word_
+
+<CustomImageTag
+  url="/assets/mobile_carwash/landingpage_design.png"
+  alt="Landing page design and implementation"
+/>
+
+_Landing page desktop design and implementation_
+
+<CustomImageTag
+  url="/assets/mobile_carwash/landingpage_mobile.png"
+  alt="Landing page initial mobile and final design"
+/>
+
+_Initial ideas on mobile landing page (left) and the result of iterations with client (right)_
+
+## Results
+
+### Feedback
+
+We tested the app with several people using desktop and mobile. The startup at the time of this documentation is in an early stage and the app is a subject for change.
+
+### Key takeaways
+
+- For a single person a monolith architecture was appropriate choice, however there might be problems at later stage of the project, when multiple developers will work on the same code.
+- It was required to invest time to learn the framework and the design system used for the project, so that I can resolve unexpected issues.
+- I needed to find a way which worked best for me and for the client side. This must have higher priority over tooling.

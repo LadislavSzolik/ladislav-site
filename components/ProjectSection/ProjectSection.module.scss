@@ -3,6 +3,10 @@
   background-color: #0F172A;
   padding-block: 90px;
   text-align: center;
+
+  @media only screen and (max-width: 833px) {
+    padding-inline: 16px;        
+  }
   
   div {
     max-width: var(--max-width);
@@ -19,5 +23,10 @@
   display: flex;
   justify-content: space-between;
   padding-block-start: 45px;
+
+  @media only screen and (max-width: 833px) {
+    flex-direction: column;        
+    gap: 24px;
+  }
 }
 

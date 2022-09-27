@@ -4,6 +4,10 @@
   text-align: center;
   padding-block: 90px;
 
+  @media only screen and (max-width: 833px) {   
+    padding-inline: 16px;
+  }
+
   p {
     padding-block-start: 8px;
     padding-block-end: 16px;

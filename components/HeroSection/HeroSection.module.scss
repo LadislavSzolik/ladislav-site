@@ -7,7 +7,8 @@
   justify-content: space-between;
 
   @media only screen and (max-width: 833px) {
-    flex-direction: column;        
+    flex-direction: column;
+    padding-inline: 16px;
   }
 
   p {

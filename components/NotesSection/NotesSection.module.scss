@@ -1,0 +1,11 @@
+.container {
+  max-width: var(--max-width);
+  margin: auto;
+  text-align: center;
+  padding-block: 90px;
+
+  p {
+    padding-block-start: 8px;
+    padding-block-end: 16px;
+  }
+}

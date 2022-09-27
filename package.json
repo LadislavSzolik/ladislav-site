@@ -8,23 +8,21 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "@mdx-js/loader": "^1.6.22",
-    "@next/mdx": "^12.0.7",
-    "@tailwindcss/line-clamp": "^0.3.0",
-    "@tailwindcss/typography": "^0.5.0",
+    "@mdx-js/loader": "^2.1.3",
+    "@next/mdx": "^12.3.0",
     "front-matter": "^4.0.2",
-    "googleapis": "^92.0.0",
-    "marked": "^4.0.7",
-    "next": "12.0.7",
-    "next-mdx-remote": "^3.0.8",
-    "react": "17.0.2",
-    "react-dom": "17.0.2"
+    "googleapis": "^107.0.0",
+    "marked": "^4.1.0",
+    "next": "12.3.0",
+    "next-mdx-remote": "^4.1.0",
+    "react": "18.2.0",
+    "react-dom": "18.2.0"
   },
   "devDependencies": {
-    "autoprefixer": "^10.4.0",
-    "eslint": "8.4.1",
-    "eslint-config-next": "12.0.7",
-    "postcss": "^8.4.4",
-    "tailwindcss": "^3.0.0"
+    "autoprefixer": "^10.4.8",
+    "eslint": "8.23.0",
+    "eslint-config-next": "12.3.0",
+    "postcss": "^8.4.16",
+    "sass": "^1.54.9"
   }
 }

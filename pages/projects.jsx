@@ -1,15 +1,14 @@
-import Heading1 from '../components/Heading1';
-import Layout from '../components/Layout';
-import Navbar from '../components/Navbar';
-import ProjectList from '../components/ProjectList';
-import { getProjects } from '../utils/projectsApi';
+import Layout from "../components/Layout";
+import Navbar from "../components/Navbar/Navbar";
+import ProjectListSection from "../components/ProjectListSection/ProjectListSection";
+
+import { getProjects } from "../utils/projectsApi";
 
 export default function Projects({ projects }) {
   return (
     <>
       <Navbar />
-      <Heading1 title="Projects" />
-      <ProjectList projects={projects} />
+      <ProjectListSection />
     </>
   );
 }

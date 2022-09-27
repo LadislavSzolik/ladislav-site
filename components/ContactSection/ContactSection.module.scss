@@ -1,0 +1,24 @@
+.container {  
+  background-color: var(--gray-1-color);
+  padding-block: 90px;
+  text-align: center;
+  
+  div {
+    max-width: var(--max-width);
+    margin: auto;
+  }
+
+  p {
+    max-width: 700px;
+    margin: auto;
+    padding-block-start: 8px;
+    padding-block-end: 16px;
+  }
+
+  a {
+    display: block;
+    font-weight: 400;
+    margin-block-end: 16px;
+    color: var(--primary-dark-color)
+  }
+}

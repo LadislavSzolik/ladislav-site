@@ -8,7 +8,7 @@ export default function Posts({ posts }) {
   return (
     <>
       <Navbar />
-      <Heading1 title="Posts" />
+      <Heading1 title="Notes about my career" />
       <PostList posts={posts} />
     </>
   );

@@ -1,0 +1,23 @@
+.container {
+  padding-block: 90px;
+  max-width: var(--max-width);
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  @media only screen and (max-width: 833px) {
+    flex-direction: column;        
+  }
+
+  p {
+    margin-block-start: 8px;
+  }
+}
+.container > div {
+  max-width: 400px;
+  text-align: center;
+  @media only screen and (max-width: 833px) {
+    margin-block-end: 16px;        
+  }
+}

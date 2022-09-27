@@ -1,12 +1,9 @@
-import { serialize } from 'next-mdx-remote/serialize';
-import { MDXRemote } from 'next-mdx-remote';
+import { serialize } from "next-mdx-remote/serialize";
+import { MDXRemote } from "next-mdx-remote";
+import Layout from "../../components/Layout";
+import { getProject, getProjects } from "../../utils/projectsApi";
 
-import Navbar from '../../components/Navbar';
-import Layout from '../../components/Layout';
-import Heading1 from '../../components/Heading1';
-import { getProject, getProjects } from '../../utils/projectsApi';
-
-import Image from 'next/image';
+import Image from "next/image";
 
 const CustomImageTag = ({ url, alt }) => {
   return (
@@ -20,9 +17,9 @@ const customComponents = { CustomImageTag };
 export default function Project({ project }) {
   return (
     <div>
-      <Navbar />
+      {/* <Navbar /> */}
       <div className="mt-6 mb-12">
-        <Heading1 title={project.title} />
+        <h1>{project.title}</h1>
       </div>
       <div className="my-6 prose mx-auto">
         <MDXRemote {...project.body} components={customComponents}></MDXRemote>

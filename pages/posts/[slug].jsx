@@ -1,14 +1,12 @@
-import Navbar from '../../components/Navbar';
-import { getPost, getPosts } from '../../utils/postsApi';
-import Heading2 from '../../components/Heading2';
-import Layout from '../../components/Layout';
+import { getPost, getPosts } from "../../utils/postsApi";
+import Layout from "../../components/Layout";
 
 export default function Post({ post }) {
   return (
     <div>
-      <Navbar />
+      {/* <Navbar /> */}
       <div className="mt-6">
-        <Heading2 title={post.title} />
+        <h2>{post.title}</h2>
       </div>
       <div
         className="my-6 prose md:prose-lg mx-auto"

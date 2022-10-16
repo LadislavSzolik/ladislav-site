@@ -7,18 +7,19 @@
   justify-content: space-between;
 
   @media only screen and (max-width: 833px) {
-    flex-direction: column;
+    padding-block: 45px;
+    flex-direction: column-reverse;    
     padding-inline: 16px;
-  }
-
-  p {
-    margin-block-start: 8px;
   }
 }
 .container > div {
-  max-width: 400px;
-  text-align: center;
-  @media only screen and (max-width: 833px) {
-    margin-block-end: 16px;        
-  }
+  max-width: 520px;
+  text-align: left;
+}
+
+.links {
+  margin-block-start: 32px;
+  gap: 24px;
+  display: flex;
+  align-items: center;
 }

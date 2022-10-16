@@ -41,6 +41,11 @@ body {
 a:not([class]) {
   text-decoration-skip-ink: auto;
 }
+a:link    {color:#DB2777;}
+a:hover   {color:#E088AF;}
+a:active  {color:#C30D5E;}
+a:visited {color:#6127DB;}
+
 
 /* Make images easier to work with */
 /* img,
@@ -62,7 +67,6 @@ select {
   html:focus-within {
    scroll-behavior: auto;
   }
-  
   *,
   *::before,
   *::after {
@@ -73,44 +77,52 @@ select {
   }
 }
 :root {
-  /* Colors */
-  --primary-color: #DB2777;
-  --primary-disabled-color: rgba(219, 39, 119,0.6);
-  --primary-dark-color: #be185d;
-  --black-color: #0F172A;
-  --gray-1-color: #FBFBFD;
+  /* Light mode colors */
+  --dark-text-color: #0F172A;
+  --gray-text-color: #FBFBFD;
+  --light-gray-bcg-color: #FBFBFD;
+
+  /* Dark mode colors */
+  /* INFO: Because of the logos and very bright images, I've decided not to use dark mode */
+  --light-text-color: #E2E8F0;
+  --dark-gray-text-color: #0;
+  --dark-bcg-color: #1E293B;
+  --dark-gray-bcg-color: #334155;
 
   /* Spacing */
   --max-width: 980px;
 
-  /* media break points */
-  --small-max-width: 833px;
+  /* media break points is: 833px, I could not use as variable*/  
 }
 
-
 body {
-  font-family: 'Inter', 'Helvetica Neue', 'Helvetica',
-    'Arial', sans-serif;  
+  font-family: 'Poppins','Helvetica Neue', 'Helvetica',
+  'Arial', sans-serif;  
   margin: 0 auto;
   font-size: 17px;
-  color: var(--black-color);
+  color: var(--dark-text-color);
 }
 
 h1 {
   font-size: 56px;
-  font-weight: 800;
-  letter-spacing: -0.02em;
+  font-weight: 800;  
 }
 h2 {
-  font-size: 48px;
-  font-weight: 700;  
-  letter-spacing: -0.02em;
+  font-size: 56px;
+  line-height: 69px;
+  font-weight: 700;    
+}
+
+h3 {
+  font-size: 46px;
+  line-height: 50px;
+  font-weight: 600;
 }
 
 h4 {
   font-size: 28px;
-  font-weight: 600;  
-  letter-spacing: -0.02em;
+  font-weight: 400;   
+  line-height: 37px; 
 }
 
 @media only screen and (max-width: 833px) {
@@ -119,6 +131,11 @@ h4 {
   }
   h2 {
     font-size: 42px;
+    line-height: 48px;
+  }
+  h3 {
+    font-size: 36px;
+    line-height: 40px;
   }
   h4{ 
     font-size: 24px;

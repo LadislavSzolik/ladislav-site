@@ -1,32 +1,18 @@
 .container {
-  color: white;
-  background-color: #0F172A;
+  background-color: var(--light-gray-bcg-color);
+
   padding-block: 90px;
   text-align: center;
 
   @media only screen and (max-width: 833px) {
+    padding-block: 45px;
     padding-inline: 16px;        
   }
   
-  div {
-    max-width: var(--max-width);
-    margin: auto;
-  }
-
-  p {
-    padding-block-start: 8px;
-    padding-block-end: 16px;
-  }
 }
 
-.projectImages{
-  display: flex;
-  justify-content: space-between;
-  padding-block-start: 45px;
-
-  @media only screen and (max-width: 833px) {
-    flex-direction: column;        
-    gap: 24px;
-  }
+.inner {
+    max-width: var(--max-width);
+    margin: auto;
 }
 

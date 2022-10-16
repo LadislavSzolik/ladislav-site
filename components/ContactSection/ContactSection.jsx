@@ -18,22 +18,6 @@ function ContactSection() {
         >
           szolik.ladislav[at]gmail.com
         </a>
-
-        <a
-          href="https://www.linkedin.com/in/ladislav-szolik-30278593/"
-          rel="noreferrer"
-          target="_blank"
-        >
-          LinkedIn
-        </a>
-
-        <a
-          href="https://github.com/LadislavSzolik"
-          rel="noreferrer"
-          target="_blank"
-        >
-          Github
-        </a>
       </div>
     </div>
   );

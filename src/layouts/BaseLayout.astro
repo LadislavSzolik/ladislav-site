@@ -1,9 +1,7 @@
 ---
-const { pageTitle } = Astro.props;
+const { pageTitle, description } = Astro.props;
 import Header from "../components/Header.astro";
 import "../styles/global.css";
-
-// TODO: Add og:description and description meta tags
 ---
 
 <html lang="en">
@@ -23,6 +21,8 @@ import "../styles/global.css";
       href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap"
       rel="stylesheet"
     />
+    <meta name="description" content={description} />
+    <meta name="og:description" content={description} />
     <title>{pageTitle}</title>
   </head>
   <body>

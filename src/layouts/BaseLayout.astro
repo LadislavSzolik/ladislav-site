@@ -1,0 +1,32 @@
+---
+const { pageTitle } = Astro.props;
+import Header from "../components/Header.astro";
+import "../styles/global.css";
+
+// TODO: Add og:description and description meta tags
+---
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.ico" />
+    <script async src="https://cdn.splitbee.io/sb.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta
+      name="keywords"
+      content="accessibility, accessible design, visually impaired, visual impairment, inclusive design, blind users, screen readers, visual design, visual principles, principles, visual ux, design elements, emotional design, beautiful design, aesthetic design, visual hierarchy, ui design, web usability, web page ux"
+    />
+    <meta name="generator" content={Astro.generator} />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <title>{pageTitle}</title>
+  </head>
+  <body>
+    <Header />
+    <slot />
+  </body>
+</html>

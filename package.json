@@ -1,28 +1,18 @@
 {
-  "name": "ladislav-web",
+  "name": "@example/minimal",
+  "type": "module",
+  "version": "0.0.1",
   "private": true,
   "scripts": {
-    "dev": "next dev",
-    "build": "next build",
-    "start": "next start",
-    "lint": "next lint"
+    "dev": "astro dev --host",
+    "start": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
+    "astro": "astro"
   },
   "dependencies": {
-    "@mdx-js/loader": "^2.1.3",
-    "@next/mdx": "^12.3.0",
-    "front-matter": "^4.0.2",
-    "googleapis": "^107.0.0",
-    "marked": "^4.1.0",
-    "next": "12.3.0",
-    "next-mdx-remote": "^4.1.0",
-    "react": "18.2.0",
-    "react-dom": "18.2.0"
-  },
-  "devDependencies": {
-    "autoprefixer": "^10.4.8",
-    "eslint": "8.23.0",
-    "eslint-config-next": "12.3.0",
-    "postcss": "^8.4.16",
-    "sass": "^1.54.9"
+    "@astrojs/image": "^0.11.0",
+    "astro": "^1.6.0",
+    "sharp": "^0.31.1"
   }
 }

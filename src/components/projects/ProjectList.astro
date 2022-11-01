@@ -1,0 +1,98 @@
+---
+import csLogo from "../../images/logos/cs-logo.svg";
+import greenwiperzLogo from "../../images/logos/greenwiperz-logo.svg";
+import oooferLogo from "../../images/logos/ooofer-logo.svg";
+
+import csDesignSystem from "../../images/home/projects/cs-design-system.png";
+import csPayments from "../../images/home/projects/cs-payments.png";
+import csxApp from "../../images/home/projects/csx-app.png";
+import greenwiperzApp from "../../images/home/projects/greenwiperz-app.png";
+import oooferApp from "../../images/home/projects/ooofer-app.png";
+import oooferPartner from "../../images/home/projects/ooofer-partner.png";
+import drawings from "../../images/home/projects/drawings.png";
+import ProjectItem from "./ProjectItem.astro";
+
+const projectListData = [
+  {
+    title: "CSX App",
+    desc: "Redesign the mobile banking app.",
+    textPosition: "top",
+    logo: csLogo,
+    img: csxApp,
+  },
+  {
+    title: "Online payments",
+    desc: "Redesign of the payment entry flows for private and business clients.",
+    textPosition: "left",
+    detail1: "Mobile • Tablet • Responsive Web",
+    logo: csLogo,
+    img: csPayments,
+  },
+  {
+    title: "Banking design system",
+    desc: "Create a design system in Sketch for online banking.",
+    textPosition: "right",
+    detail1: "Mobile • Tablet • Responsive Web",
+    logo: csLogo,
+    img: csDesignSystem,
+  },
+  {
+    title: "Booking system",
+    desc: "Design and develop an online car wash booking system with payments.",
+    textPosition: "left",
+    detail1: "Responsive Web",
+    detail2: "Laravel PHP • Tailwind CSS • Datatrans",
+    logo: greenwiperzLogo,
+    img: greenwiperzApp,
+  },
+  {
+    title: "Booking App",
+    desc: "Develop a mobile app to book private and open workspaces in hotels for remote workers.",
+    textPosition: "top",
+    detail1: "React Native • Amazon Web Services (AWS)",
+    logo: oooferLogo,
+    img: oooferApp,
+  },
+  {
+    title: "Partner web",
+    desc: "Design and develop a responsive web app for partners onboarding.",
+    textPosition: "right",
+    detail1: "Responsive Web",
+    detail2: "React Native • Amazon Web Services (AWS)",
+    logo: oooferLogo,
+    img: oooferPartner,
+  },
+  {
+    title: "100 days illustrations",
+    desc: "To push myself and learn digital illustration, I illustrated 100 different sport throughout 100 days.",
+    textPosition: "top",
+    img: drawings,
+  },
+];
+---
+
+<div class="outter-layout">
+  <div class="container inner-layout">
+    <h1>Projects</h1>
+    <div class="spacing">
+      {projectListData.map((project) => <ProjectItem project={project} />)}
+    </div>
+  </div>
+</div>
+
+<style>
+  .inner-layout {
+    padding-block: 3em;
+  }
+
+  .outter-layout {
+    background-color: var(--light-gray-bcg-color);
+    text-align: center;
+  }
+  .spacing {
+    display: flex;
+    flex-direction: column;
+    gap: 4em;
+    margin-block-start: 1em;
+  }
+</style>

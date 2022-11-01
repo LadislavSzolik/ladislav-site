@@ -1,0 +1,84 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import ProjectList from "../components/projects/ProjectList.astro";
+import { Image } from "@astrojs/image/components";
+import profilePicture from "../images/home/profile_photo.png";
+// TODO: Change greenwiperz icon
+---
+
+<BaseLayout pageTitle="Ladislav Szolik">
+  <div class="container header">
+    <div>
+      <p class="intro-text">
+        Ladislav Szolik, UX designer at Swisscom. Researching and designing web applications. Previously, mobile and web
+        UX designer for banking at Credit Suisse. Also worked as Software Engineer at Accenture. From Slovakia, living
+        in Switzerland, Zürich.
+      </p>
+      <div class="links">
+        <a href="https://www.linkedin.com/in/ladislav-szolik-30278593/" target="_blank" rel="noreferrer"> LinkedIn</a>
+        <a href="/LadislavSzolik-CV.pdf" target="_blank">Resume (PDF)</a>
+      </div>
+    </div>
+    <Image src={profilePicture} alt="Profile picture" aspectRatio="1:1" width={344} />
+  </div>
+
+  <ProjectList />
+
+  <div class="container contact">
+    <h2>Contact</h2>
+    <p class="contact-text">
+      Do you have a project in mind, but you need help with the web sites and Apps? Are you searching for a senior User
+      Experience designer? Or maybe you are getting started in your career and you need somebody to expand your
+      perspective?
+    </p>
+    <a href="mailto:szolik.ladislav@gmail.com" rel="noreferrer" target="_blank"> szolik.ladislav[at]gmail.com</a>
+  </div>
+</BaseLayout>
+
+<style>
+  .header {
+    padding-block-start: 1em;
+    padding-block-end: 2em;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  @media only screen and (max-width: 833px) {
+    .header {
+      padding-block-start: 0.5em;
+      padding-block-end: 2em;
+      flex-direction: column-reverse;
+    }
+  }
+  .header > div {
+    max-width: 520px;
+    text-align: left;
+  }
+  .intro-text {
+    font-size: 28px;
+    font-weight: 400;
+    line-height: 37px;
+  }
+  @media only screen and (max-width: 833px) {
+    .intro-text {
+      font-size: 24px;
+    }
+  }
+
+  .links {
+    margin-block-start: 1em;
+    gap: 2em;
+    display: flex;
+    align-items: center;
+  }
+  .contact {
+    text-align: center;
+    padding-block: 3em;
+  }
+  .contact-text {
+    max-width: 700px;
+    margin: auto;
+    padding-block-start: 0.5em;
+    padding-block-end: 1em;
+  }
+</style>

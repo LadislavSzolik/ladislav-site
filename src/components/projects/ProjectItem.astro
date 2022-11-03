@@ -1,13 +1,13 @@
 ---
 const {
-  project: { title, desc, detail1, detail2, img, logo, textPosition = "right" },
+  project: { title, desc, detail1, detail2, img, logo, textPosition = "right", imgW, imgH },
 } = Astro.props;
 
 const layoutFlexDirection = textPosition === "top" ? "column" : textPosition === "right" ? "row-reverse" : "row";
 const logoCenter = textPosition === "top" ? "center" : "flex-start";
 const descTextCenter = textPosition === "top" ? "center" : "left";
 
-const imageWidth = textPosition === "top" ? 980 : 540;
+//const imageWidth = textPosition === "top" ? 980 : 540;
 ---
 
 <style define:vars={{ layoutFlexDirection, logoCenter, descTextCenter }}>
@@ -46,5 +46,5 @@ const imageWidth = textPosition === "top" ? 980 : 540;
     {detail1 && <p class="gray-text">{detail1}</p>}
     {detail2 && <p class="gray-text">{detail2}</p>}
   </div>
-  <img loading="lazy" src={img} alt={title} width={imageWidth} />
+  <img loading="lazy" src={img} alt={title} width={imgW} height={imgH} />
 </div>

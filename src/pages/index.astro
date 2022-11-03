@@ -1,25 +1,25 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
 import ProjectList from "../components/projects/ProjectList.astro";
-import { Image } from "@astrojs/image/components";
-import profilePicture from "../images/home/profile_photo.png";
-// TODO: Change greenwiperz icon
+import profilePicture from "../images/home/profile_photo.webp";
+
+console.log(profilePicture);
+const pageDescription =
+  "Ladislav Szolik, UX designer at Swisscom. Researching and designing web applications. Previously, mobile and web UX designer for banking at Credit Suisse. Also worked as Software Engineer at Accenture. From Slovakia, living in Switzerland, Zürich.";
 ---
 
-<BaseLayout pageTitle="Ladislav Szolik">
+<BaseLayout pageTitle="Ladislav Szolik" description={pageDescription}>
   <div class="container header">
     <div>
       <p class="intro-text">
-        Ladislav Szolik, UX designer at Swisscom. Researching and designing web applications. Previously, mobile and web
-        UX designer for banking at Credit Suisse. Also worked as Software Engineer at Accenture. From Slovakia, living
-        in Switzerland, Zürich.
+        {pageDescription}
       </p>
       <div class="links">
         <a href="https://www.linkedin.com/in/ladislav-szolik-30278593/" target="_blank" rel="noreferrer"> LinkedIn</a>
-        <a href="/LadislavSzolik-CV.pdf" target="_blank">Resume (PDF)</a>
+        <a href="/downloads/LadislavSzolik-CV.pdf" target="_blank">Resume (PDF)</a>
       </div>
     </div>
-    <Image src={profilePicture} alt="Profile picture" aspectRatio="1:1" width={344} />
+    <img src={profilePicture} alt="Profile picture" width="344" height="344" />
   </div>
 
   <ProjectList />

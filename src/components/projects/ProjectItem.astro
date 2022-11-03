@@ -1,6 +1,4 @@
 ---
-import { Picture } from "@astrojs/image/components";
-
 const {
   project: { title, desc, detail1, detail2, img, logo, textPosition = "right" },
 } = Astro.props;
@@ -48,5 +46,5 @@ const imageWidth = textPosition === "top" ? 980 : 540;
     {detail1 && <p class="gray-text">{detail1}</p>}
     {detail2 && <p class="gray-text">{detail2}</p>}
   </div>
-  <Picture src={img} alt={title} widths={[360, 1100]} sizes={`(max-width: 800px) 360px, ${imageWidth}px`} />
+  <img loading="lazy" src={img} alt={title} width={imageWidth} />
 </div>

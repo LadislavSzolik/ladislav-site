@@ -1,6 +1,6 @@
 ---
 const {
-  project: { title, desc, detail1, detail2, img, logo, textPosition = "right", imgW, imgH },
+  project: { title, desc, detail1, detail2, img, logo, textPosition = "right", imgW, imgH, link },
 } = Astro.props;
 
 const layoutFlexDirection = textPosition === "top" ? "column" : textPosition === "right" ? "row-reverse" : "row";
@@ -45,6 +45,7 @@ const descTextCenter = textPosition === "top" ? "center" : "left";
     <p>{desc}</p>
     {detail1 && <p class="gray-text">{detail1}</p>}
     {detail2 && <p class="gray-text">{detail2}</p>}
+    {link && <a href={link}>View</a>}
   </div>
   <img loading="lazy" src={img} alt={title} width={imgW} />
 </div>

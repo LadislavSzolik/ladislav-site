@@ -39,6 +39,7 @@ const { frontmatter } = Astro.props;
     margin-inline: 0.3em;
   }
 </style>
+
 <style is:global>
   .prose h1 {
     margin-block-start: 0.5em;
@@ -68,6 +69,11 @@ const { frontmatter } = Astro.props;
   .prose video,
   img {
     margin-block: 1em;
+  }
+
+  .prose figcaption {
+    font-size: 0.8em;
+    color: var(--gray-text-color);
   }
 
   @media only screen and (max-width: 833px) {

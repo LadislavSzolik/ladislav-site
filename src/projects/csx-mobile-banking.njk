@@ -49,15 +49,7 @@ activities: ["Wireframing", "Visual design (Sketch)", "Interaction design (Sketc
         </div>
     </section>
 
-
-    <section class="max-w-5xl px-4">
-        <h2 class="text-4xl sm:text-6xl font-semibold text-center mb-6 sm:mb-8">Activities</h2>
-        <div class="flex flex-wrap justify-center gap-2 text-sm sm:text-base">
-            {% for activity in activities %}
-                <p class="py-2 px-6 bg-sky-100 text-blue-800 rounded-3xl shrink-0">{{ activity }}</p>
-            {% endfor %}
-        </div>
-    </section>
+    {% include  "partials/activities.njk" %}
 
     <section class="max-w-3xl px-4">
         <h2 class="text-4xl sm:text-6xl font-semibold text-center mb-6 sm:mb-8">Getting started</h2>
@@ -102,10 +94,10 @@ activities: ["Wireframing", "Visual design (Sketch)", "Interaction design (Sketc
             <figcaption class="text-slate-600 text-center">Initial scenarios sketched on a workshop with stakeholders
             </figcaption>
         </figure>
-        {% lessonsLearned %}
+        {% lessons %}
             The beginning was very chaotic, but we needed to accept this and trust the process. We learned to keep
             stakeholders in the loop, in exchange they were helping to push the concept further.
-        {% endlessonsLearned %}
+        {% endlessons %}
     </section>
 
     <section class="max-w-5xl flex flex-col sm:flex-row px-4">
@@ -144,9 +136,9 @@ activities: ["Wireframing", "Visual design (Sketch)", "Interaction design (Sketc
         <img class="mt-8" src="/images/csx-mobile-banking/early-designs.webp" width="800"
              height="512" loading="lazy" decoding="async"
              alt="Three screens of the previous home screen"/>
-        {% lessonsLearned %}
+        {% lessons %}
             This concept was made interactive by Origami Studio. It motivated the team and gave them the feeling of working on something great and exceptional. However, we needed adapt the design as the data was missing and the visual design was far from our current branding. Additionally, logos and profile pictures showed legal and technical concerns.
-        {% endlessonsLearned %}
+        {% endlessons %}
     </section>
 
     <section class="max-w-5xl flex flex-col items-center px-4">

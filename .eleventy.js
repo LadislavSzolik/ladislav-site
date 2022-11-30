@@ -1,5 +1,6 @@
 const lessons = require("./src/_includes/shortcodes/lessons");
-
+const md = require('./src/_includes/shortcodes/md')
+const markdown = require('./src/_plugins/markdown');
 module.exports = function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy({ "src/assets/images": "images" });
   eleventyConfig.addPassthroughCopy({ "src/assets/downloads": "downloads" });
@@ -8,6 +9,8 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy({ "src/assets/robots.txt": "robots.txt" });
 
   eleventyConfig.addPairedNunjucksShortcode("lessons",lessons);
+  eleventyConfig.addPairedShortcode("md", md);
+
   /*
   eleventyConfig.addNunjucksShortcode("activities", (activities) => `
   <section class="max-w-4xl px-4">
@@ -18,7 +21,10 @@ module.exports = function (eleventyConfig) {
     </section>
   `)*/
 
+  eleventyConfig.setLibrary("md",markdown);
+
   return {
+    markdownTemplateEngine: 'njk',
     dir: {
       input: "src",
       data: "_data",

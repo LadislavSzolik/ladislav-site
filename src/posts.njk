@@ -1,0 +1,21 @@
+---
+layout: base
+title: Posts
+---
+{% include "partials/nav.njk" %}
+<div class="prose mx-auto my-8 text-center prose-h2:mb-2 prose-p:my-2">
+  <h1 >{{ title }}</h1>
+
+  {%- for post in collections.post | reverse -%}
+    <article>
+      <a class="text-blue-600 underline-offset-4" href="{{ post.url }}">
+        <h2>{{ post.data.title }}</h2>
+      </a>
+      <time class="text-gray-500" datetime={{ page.date }}>
+        {{ post.date | postDate }}
+      </time>
+      <p class="text-left">{{ post.data.description}}</p>
+    </article>
+  {%- endfor -%}
+
+</div>

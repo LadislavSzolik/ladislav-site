@@ -1,9 +1,10 @@
 ---
 layout: base
 ---
+
 <header class="pb-12 flex flex-col items-center bg-gradient-to-b from-cyan-200 to-white">
+    {% include "partials/nav.njk" %}
     <div class="max-w-3xl mx-auto text-center prose prose-lg">
-        {% include "partials/home-link.njk" %}
         <img class="mx-auto mb-4" src="{{ client.logo }}" alt="{{ client.name }}" width="180" height="24"/>
         <h1>{{ title }}</h1>
         <img class="mx-auto mt-10 sm:mt-8 transition-all delay-200 duration-500 opacity-0 -translate-y-12 image-fade"

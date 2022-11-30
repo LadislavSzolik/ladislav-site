@@ -1,6 +1,9 @@
 const lessons = require("./src/_includes/shortcodes/lessons");
-const md = require('./src/_includes/shortcodes/md')
-const markdown = require('./src/_plugins/markdown');
+const md = require("./src/_includes/shortcodes/md");
+const markdown = require("./src/_plugins/markdown");
+
+const { DateTime } = require("luxon");
+
 module.exports = function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy({ "src/assets/images": "images" });
   eleventyConfig.addPassthroughCopy({ "src/assets/downloads": "downloads" });
@@ -8,8 +11,12 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy({ "src/assets/favicon.ico": "favicon.ico" });
   eleventyConfig.addPassthroughCopy({ "src/assets/robots.txt": "robots.txt" });
 
-  eleventyConfig.addPairedNunjucksShortcode("lessons",lessons);
+  eleventyConfig.addPairedNunjucksShortcode("lessons", lessons);
   eleventyConfig.addPairedShortcode("md", md);
+
+  eleventyConfig.addFilter("postDate", (dateObj) => {
+    return DateTime.fromJSDate(dateObj).toLocaleString(DateTime.DATE_MED);
+  });
 
   /*
   eleventyConfig.addNunjucksShortcode("activities", (activities) => `
@@ -21,10 +28,10 @@ module.exports = function (eleventyConfig) {
     </section>
   `)*/
 
-  eleventyConfig.setLibrary("md",markdown);
+  eleventyConfig.setLibrary("md", markdown);
 
   return {
-    markdownTemplateEngine: 'njk',
+    markdownTemplateEngine: "njk",
     dir: {
       input: "src",
       data: "_data",

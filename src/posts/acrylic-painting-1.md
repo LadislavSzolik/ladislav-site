@@ -1,7 +1,7 @@
 ---
 title: "Venturing into Acrylic Painting"
 date: 2023-05-23
-description: "Working as a designer has many flavours. You can enjoy the flexible life of a freelancer. Other option is to work at a cool design agency on different projects or work on bigger projects as a consultant. Lastly, some people practice their craft as an in-house designer. How do they differ from each other?"
+description: "In this reflective piece, I explore acrylic painting, initiated by a friend's request for original artworks. The journey involves decisions about my artistic themes, the choice of medium, and the acquisition of new skills, with a specific emphasis on understanding the nuances of acrylic paint."
 tags: ["post", "art"]
 ---
 

@@ -12,6 +12,9 @@
   </head>
   <body class="text-stone-800">
     {{content | safe}}
-    <script defer src="https://va.vercel-scripts.com/v1/script.debug.js"></script>
+    {% if site.env == "production" %}
+      <script defer src="https://va.vercel-scripts.com/v1/script.js"></script>
+    {% endif %}
+    
   </body>
 </html>

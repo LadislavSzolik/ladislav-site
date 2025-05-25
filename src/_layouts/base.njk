@@ -12,10 +12,6 @@
   </head>
   <body class="text-stone-800">
     {{content | safe}}
-    <script type="module">
-    import { inject } from '@vercel/analytics';
-
-inject();
-    </script>
+    <script defer src="https://va.vercel-scripts.com/v1/script.debug.js"></script>
   </body>
 </html>

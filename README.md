@@ -1,9 +1,5 @@
 # My site in 11ty
 
-## Todos
-
-- [ ] Add my blogs to the page
-- [ ] Finish projects documentations
 
 ## Before coding
 - create designs to try out different spacing, size, font, etc. Otherwise playing around with size in code can lead to infinite loop

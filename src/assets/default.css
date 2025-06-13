@@ -129,6 +129,18 @@ article.project-body {
     text-align: center;
   }
 
+  & figure .small-image {
+    max-width: 400px;
+    width: 100%;
+    height: auto;
+  }
+
+  & figure img {
+    max-width: 800px;
+    width: 100%;
+    height: auto;
+  }
+
   & p,
   li {
     font-size: 18px;
@@ -150,12 +162,12 @@ article.project-body {
 
 
   & ol {
-    padding-inline-start: 1em;
+    padding-inline-start: 26px;
   }
 
   & ol li {
     list-style: none;    
-    padding-inline-start: 30px;            
+    padding-inline-start: 16px;            
     position: relative;
     
   }
@@ -166,6 +178,11 @@ article.project-body {
      position: absolute;
     left: 0;
     
-  }
-
+  } 
 }
+
+ @media (max-width: 640px) {
+    article.project-body {
+      padding-inline: 1rem;
+    }
+  }

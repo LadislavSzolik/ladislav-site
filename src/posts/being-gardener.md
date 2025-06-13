@@ -11,9 +11,9 @@ tags: ["post", "career"]
     alt="A photo of a strawberry garden"
   />
   <figcaption>
-{% md %}
+
 Photo by [Farsai Chaikulngamdee](https://unsplash.com/@clearsky?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText) on [Unsplash]("https://unsplash.com/photos/IdrzXJQlw5w?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)
-{% endmd %}    
+
   </figcaption>
 </figure>
 

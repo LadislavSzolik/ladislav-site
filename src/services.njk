@@ -1,0 +1,167 @@
+---
+layout: base
+title: Services
+---
+
+<style>
+  .services {
+    padding: 4rem 2rem;
+    display: flex;
+    flex-direction: column;
+    max-width: var(--max-width);
+    margin-inline: auto;
+
+    & h1 {
+      text-align: center;
+      padding-block-end: 2rem;      
+    }
+
+    & a.link {
+      display: inline-block;
+      margin-block-start: 1rem;
+      font-size: 1.1rem;
+      background-color: var(--light-gray);
+      padding: 0.5rem 1.25rem;
+      border-radius: 0.5rem;
+      text-decoration: none;            
+    }
+  }
+
+  .service-section {
+    display: flex;
+    margin-block-end: 4rem;
+
+    & h2 {
+      margin-block-end: 1rem;
+    }
+
+    & h3 {
+      margin-block: 0.5rem;
+    }
+
+    & p {
+      margin-block-end: 1rem;
+    }
+
+    & img {
+      width: 40%;
+      border-radius: 12px;
+      object-fit: cover;
+    }
+
+    & li {
+      position: relative;
+      padding-inline-start: 30px;
+    }
+
+    & li::before {
+      position: absolute;
+      left: 0;
+      content: "•";
+      color: var(--blue);
+    }
+  }
+
+  .right-image {
+    flex-direction: row-reverse;
+  }
+
+  .service-text {
+    padding-inline: 2rem;
+  }
+  @media (max-width: 640px) {
+    .service-section {
+      flex-direction: column;
+
+      & img {
+        width: 100%;
+        height: auto;        
+        flex: 0 0 auto;
+        margin: 2rem 0;
+        border-radius: 12px;
+        object-fit: cover;
+      }
+    }
+  }
+</style>
+
+<section class="services">
+  <h1 class="header-1">{{ title }}</h1>
+
+  <div class="service-section">
+    <div class="service-text">
+      <h2 class="header-2" id="ux-audit">UX Audit &amp; Usability Testing</h2>
+      <p>
+        A UX audit helps uncover pain points in your website or app that may hinder usability or prevent conversions. By
+        identifying and addressing these issues, we improve both the user experience and your business outcomes.
+      </p>
+      <h3>Basic UX audit</h3>
+      <p>A fast, heuristic-based evaluation to uncover key usability issues.</p>
+      <ul>
+        <li>Review of your website or app using proven usability heuristics</li>
+        <li>Annotated screenshots highlighting specific problems and recommendations</li>
+        <li>Practical, prioritized suggestions to improve UX quickly</li>
+      </ul>
+      <h3>Advanced UX audit</h3>
+      <p>A deeper analysis informed by real user behavior.</p>
+      <ul>
+        <li>Includes everything in the Basic Audit</li>
+        <li>4–8 moderated usability test sessions with your target audience</li>
+        <li>A detailed report with key findings, patterns, and actionable design suggestions</li>
+        <li>Optional: review of analytics data to uncover behavioral insights (if available)</li>
+      </ul>
+      <a class="link" href="#contact">Contact</a>
+    </div>
+    <img src="/images/services/ux-audit-second.webp" alt="UX audit" />
+  </div>
+
+  <div class="service-section right-image">
+    <div class="service-text">
+      <h2 class="header-2" id="digital-design">Digital Product Design (UX & UI)</h2>
+      <p>
+        I design intuitive, high-quality user interfaces for digital products — including websites, web apps, and mobile
+        applications. Whether you’re starting with a rough idea or solving a specific problem, I guide you through a
+        structured design process that turns concepts into testable solutions.
+      </p>
+
+      <p>
+        Using the Double Diamond methodology, I explore, define, and iterate quickly — ensuring that design decisions
+        are user-informed and business-aligned.
+      </p>
+
+      <p>
+        I create interactive, high-fidelity prototypes in Figma, which allow for fast feedback, clear communication, and
+        smoother developer handoffs. My focus is always on practical, result-driven design that improves usability,
+        supports business goals, and minimizes development risk.
+      </p>
+      <a class="link" href="#contact">Contact</a>
+    </div>
+    <img src="/images/services/design-second.webp" alt="Digital product design" />
+  </div>
+
+  <div class="service-section">
+    <div class="service-text">
+      <h2 class="header-2" id="web-dev">Website development</h2>
+      <p>
+        I build fast, secure, and maintainable websites using static site generators — specifically
+        <a href="https://www.11ty.dev/" target="_blank">11ty (Eleventy)</a>.
+      </p>
+
+      <p>
+        Unlike traditional WordPress sites, static websites are lightweight, secure by default, and require no
+        server-side maintenance.
+      </p>
+
+      <p>
+        With a background in building modern web apps using frameworks like React and Angular, I now focus on
+        static-first architectures that deliver excellent performance and user experience. This service is ideal for
+        portfolios, small business websites, or documentation pages that need to load fast, stay secure, and be
+        cost-effective to host.
+      </p>
+       <a class="link" href="#contact">Contact</a>
+    </div>
+    <img src="/images/services/development-second.webp" alt="Web development" />
+  </div>
+</section>
+
+{% include "contact-form.njk" %}

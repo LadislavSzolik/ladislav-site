@@ -1,0 +1,23 @@
+{
+    "title" : "Services",
+    "serviceList" : [
+        {
+        "title": "Usability audit",
+        "description": "A comprehensive review of your website's user experience to identify areas for improvement.",
+        "image": "/images/services/typewriter.webp",
+        "link":"/services#ux-audit"
+        },         
+         {
+        "title": "Digital design",
+        "description": "Discovery of a digital website or an app starting from an idea to implementation ready concept.",
+        "image": "/images/services/pencil.webp",
+        "link":"/services#digital-design"
+        },
+         {
+        "title": "Web development",
+        "description": "Website development using modern and affordable technologies.",
+        "image": "/images/services/keyboard.webp",
+        "link":"/services#web-dev"
+        }
+    ]
+}

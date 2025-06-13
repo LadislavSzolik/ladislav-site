@@ -1,15 +1,17 @@
 {
   "name": "ladislav-site-11ty",
   "version": "1.0.0",
+  "private": true,
   "description": "",
   "main": "index.js",
+  "type": "module",
   "scripts": {
-    "start": "npm-run-all -p dev:*",
-    "build": "run-s build:*",
-    "dev:11ty": "ELEVENTY_ENV=dev eleventy --serve",
-    "dev:css": "tailwindcss -i src/assets/global.css -o _site/assets/global.css --watch --postcss",
-    "build:11ty": "ELEVENTY_ENV=prod eleventy",
-    "build:css": "tailwindcss -i src/assets/global.css -o _site/assets/global.css --minify --postcss"
+    "start": "eleventy --serve --incremental --quiet",
+		"publish:dev": "ELEVENTY_ENV=dev eleventy",
+		"publish:prod": "ELEVENTY_ENV=prod eleventy",
+		"format": "biome format --write ./_source",
+		"lint": "biome lint --write ./_source",
+		"check": "biome check --write ./_source" 
   },
   "repository": {
     "type": "git",
@@ -22,16 +24,12 @@
     "url": "https://github.com/LadislavSzolik/ladislav-site-11ty/issues"
   },
   "homepage": "https://github.com/LadislavSzolik/ladislav-site-11ty#readme",
-  "devDependencies": {
-    "@11ty/eleventy": "^3.1.0",
-    "@tailwindcss/cli": "^4.1.7",
-    "@tailwindcss/typography": "^0.5.16",
-    "autoprefixer": "^10.4.21",
-    "npm-run-all": "^4.1.5",
-    "postcss": "^8.5.3",
-    "tailwindcss": "^4.1.7"
-  },
+ 
   "dependencies": {
     "@vercel/analytics": "^1.5.0"
+  },
+   "devDependencies": {
+    "@11ty/eleventy": "^3.1.0",
+    "@biomejs/biome": "1.9.4"    
   }
 }

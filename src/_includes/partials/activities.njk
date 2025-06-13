@@ -1,5 +1,20 @@
-<div class="flex flex-wrap justify-center gap-2 ">
-{% for activity in activities %}
-<span class="py-2 px-6 bg-sky-100 text-blue-800 rounded-3xl shrink-0 text-sm">{{activity}}</span>
-{% endfor %}
-</div>
+<style>
+  .activity-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+
+    & span {
+      padding-inline: 0.8rem;
+      padding-block: 0.6rem;
+      color: var(--blue);
+      background: linear-gradient(to top, #e8e8f6, #eaeaf7, #ebecf8, #edeef9, #eff0fa);
+      border-radius: 24px;
+    }
+  }
+</style>
+
+<section class="activity-container">
+  {% for activity in activities %}<span>{{ activity }}</span>{% endfor %}
+</section>

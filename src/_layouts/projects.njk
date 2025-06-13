@@ -2,34 +2,53 @@
 layout: base
 ---
 
-<header class="pb-12 flex flex-col items-center bg-gradient-to-b from-cyan-200 to-white">
-    {% include "partials/nav.njk" %}
-    <div class="max-w-3xl mx-auto text-center prose prose-lg">
-        <img class="mx-auto mb-4" src="{{ client.logo }}" alt="{{ client.name }}" width="180" height="24"/>
-        <h1>{{ title }}</h1>
-        <img class="mx-auto mt-10 sm:mt-8 transition-all delay-200 duration-500 opacity-0 -translate-y-12 image-fade"
-             src="{{ image }}"
-             alt="{{ description }}"
-             width="800"
-             height="600"/>
+<style>
+  
+  .project-header {
+    background: linear-gradient(90deg, #e3ffe7 0%, #d9e7ff 100%);
+  }
+  .project-header-inner {
+    max-width: var(--max-width);
+    margin: 0 auto;
+    padding-block-start: 4rem;
+    padding-block-end: 2rem;  
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    align-items: center;
+  }
+  .project-body {
+    max-width: var(--max-width-project);
+    margin: 0 auto;    
+    padding-block-end: 3rem;
+  }
+</style>
+
+<section>
+  <header class="project-header">
+    <div class="project-header-inner">
+      <img src="{{ client.logo }}" alt="{{ client.name }}" width="180" height="24" />
+      <h1 class="header-1">{{ title }}</h1>
+      <img class="image-fade" src="{{ image }}" alt="{{ description }}" width="800"  />
     </div>
-</header>
-
-<article class="max-w-3xl mx-auto prose prose-p:my-1 prose-headings:text-center prose-p:leading-7 prose-li:leading-7 prose-li:my-0 prose-h4:mt-2  px-4">
+  </header>
+  <article class="project-body">
     {{ content | safe }}
-    {% include "partials/home-link.njk" %}
-</article>
-
+  </article>
+</section>
 
 <script>
-    const image = document.querySelector(".image-fade");
-    const fadeIn = new IntersectionObserver (function (entries) {
-        entries.forEach(function(entry) {
-            if (entry.isIntersecting) {
-                entry.target.classList.add("opacity-100");
-                entry.target.classList.add("translate-y-0");
-            }
-        }, {threshold: 1});
-    });
-    fadeIn.observe(image);
+  const image = document.querySelector(".image-fade");
+  const fadeIn = new IntersectionObserver(function (entries) {
+    entries.forEach(
+      function (entry) {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("opacity-100");
+          entry.target.classList.add("translate-y-0");
+        }
+      },
+      { threshold: 1 }
+    );
+  });
+  fadeIn.observe(image);
 </script>

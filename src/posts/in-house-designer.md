@@ -11,9 +11,9 @@ tags: ["post", "career"]
     alt="A photo of a person sitting front of the computer"
   />
   <figcaption>
-{% md %}
+
 Photo by [Faizur Rehman](https://unsplash.com/@fazurrehman?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText) on [Unsplash](https://unsplash.com/s/photos/ux-designer?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)
-{% endmd %}    
+
   </figcaption>
 </figure>
 

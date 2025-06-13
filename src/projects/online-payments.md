@@ -4,9 +4,17 @@ title: Online payment
 image: /images/online-payments/payments-lg.webp
 description: Redesign of the payment entry for private and business clients
 client:
-    logo: /images/logos/cs-logo.svg
-    name: Credit Suisse
-activities: ["Interaction design (Sketch)", "Prototyping (InVision)", "IT hand-offs", "Usability testing", "Design thinking workshops", "Stakeholder management"]
+  logo: /images/logos/cs-logo.svg
+  name: Credit Suisse
+activities:
+  [
+    "Interaction design (Sketch)",
+    "Prototyping (InVision)",
+    "IT hand-offs",
+    "Usability testing",
+    "Design thinking workshops",
+    "Stakeholder management",
+  ]
 ---
 
 ## Introduction
@@ -38,48 +46,50 @@ experience.
 ## Getting started
 
 ### Challenges
-The two payments portals for private and business users, have evolved over the years, and we noticed  a change resistance from the product team side. The first challenge was to understand the stakeholders’ view. Secondly, we needed to bring all private and business stakeholders together and build a common  vision for the new payments' module.
+
+The two payments portals for private and business users, have evolved over the years, and we noticed a change resistance from the product team side. The first challenge was to understand the stakeholders’ view. Secondly, we needed to bring all private and business stakeholders together and build a common vision for the new payments' module.
 
 ### Proposed solutions
-We conducted interviews with stakeholders and knowledge transfer sessions with a subject-matter expert. Then, we created a list of features which they want to keep and the features they are open to change.  Later, we run a series of design thinking workshops to build a vision.
 
-<div class="grid sm:grid-cols-2 gap-6 sm:gap-2 mx-auto">
-    <figure class="">
-        <img class="mx-auto" src="/images/online-payments/payment-whiteboard-1.webp" width="390" height="292"
+We conducted interviews with stakeholders and knowledge transfer sessions with a subject-matter expert. Then, we created a list of features which they want to keep and the features they are open to change. Later, we run a series of design thinking workshops to build a vision.
+
+<div>
+    <figure >
+        <img src="/images/online-payments/payment-whiteboard-1.webp" width="390" height="292"
              loading="lazy"
              decoding="async"
              alt="Image of a whiteboard from payment workshop"/>
-        <figcaption class="mt-2 text-sm text-slate-600 text-center whitespace-normal">Whiteboard sketches from
+        <figcaption >Whiteboard sketches from
             design thinking workshops. We were
             merging private and business client layout into one.
         </figcaption>
     </figure>
-    <figure class="">
-        <img class="mx-auto" src="/images/online-payments/payment-whiteboard-2.webp" width="390" height="292"
+    <figure >
+        <img src="/images/online-payments/payment-whiteboard-2.webp" width="390" height="292"
              loading="lazy"
              decoding="async"
              alt="Image of a whiteboard from payment workshop"/>
-        <figcaption class="mt-2 text-sm text-slate-600 text-center">Whiteboard sketches from design thinking
+        <figcaption>Whiteboard sketches from design thinking
             workshops. We defined the information architecture for the payment review page.
         </figcaption>
     </figure>
 </div>
 
-{% lessons %}
+### Lessons learned
 To fulfil every stakeholder’s requirement is difficult. Workshops helped us to align everyone, additionally we created the “we are in this together” mindset, which improved our collaboration.
-{% endlessons %}
 
 ## Designing the payment entry flows
 
 ### Previous version
+
 After the research phase, we started preparing designs for payment entry flows of domestic, international, red, orange and later QR payments. From production database, stakeholders and customer support we learned about existing pain points of the current solution:
 
-<figure class="my-8">
-    <img class="mx-auto" src="/images/online-payments/payment-flow-old.webp" width="800" height="486"
+<figure >
+    <img  src="/images/online-payments/payment-flow-old.webp" width="800" height="486"
          loading="lazy"
          decoding="async"
          alt="Domestic payment entry"/>
-    <figcaption class="mt-2 text-sm text-slate-600 text-center">Domestic payment entry (previous)
+    <figcaption >Domestic payment entry (previous)
     </figcaption>
 </figure>
 
@@ -88,38 +98,41 @@ After the research phase, we started preparing designs for payment entry flows o
 3. Duplicate and incomplete payments, as users did not notice the end of payment flow.
 
 ### Final design
+
 We designed the new payment entries using the new corporate brand, which in this case meant changing from turquoise to black. The entry flows were tested over 16 private and 8 business users.
 
-<figure class="my-8">
-    <img class="mx-auto" src="/images/online-payments/payment-entry-flow-new.webp" width="800" height="486"
+<figure >
+    <img src="/images/online-payments/payment-entry-flow-new.webp" width="800" height="562"
          loading="lazy"
          decoding="async"
          alt="Domestic payment entry new flow"/>
-    <figcaption class="mt-2 text-sm text-slate-600 text-center">Domestic payment entry (new)
+    <figcaption>Domestic payment entry (new)
     </figcaption>
 </figure>
 
-1. Duplicate & incomplete payments were fixed after we introduced a wizard, which helped users to orient and know when payments are submitted 
-2. Instead of showing all accounts, we went back to a simple solution, and used a dropdown instead 
+1. Duplicate & incomplete payments were fixed after we introduced a wizard, which helped users to orient and know when payments are submitted
+2. Instead of showing all accounts, we went back to a simple solution, and used a dropdown instead
 3. Standing order was placed at users’ blind spot. We integrated it in the screen, close to the execution date
 
 ### Results
+
 - Hotlines reported decrease in recurring payment related calls.
 - Production database showed decrease in double and abandon payments.
 
 ## Designing the assistant
 
 ### Previous version
+
 Switzerland has a complex payment system even for private clients. Because of this complexity the bank introduced an assistant to help them.
 
 Unfortunately, this feature brought another layer of confusion. The product team gave up solving this challenge and provided a YouTube video as explanation.
 
-<figure class="my-8">
-    <img class="mx-auto" src="/images/online-payments/assistant-old.webp" width="800" height="486"
+<figure >
+    <img src="/images/online-payments/assistant-old.webp" width="800" height="485"
          loading="lazy"
          decoding="async"
          alt="Previous version of payment assistant"/>
-    <figcaption class="mt-2 text-sm text-slate-600 text-center">Previous version of payment assistant
+    <figcaption >Previous version of payment assistant
     </figcaption>
 </figure>
 
@@ -131,39 +144,37 @@ Unfortunately, this feature brought another layer of confusion. The product team
 
 We wanted to simplify the assistant as much as possible and come up with a very visual concept:
 
-<figure class="my-8">
-    <img class="mx-auto" src="/images/online-payments/assistant-early.webp" width="800" height="486"
+<figure >
+    <img  src="/images/online-payments/assistant-early.webp" width="800" height="562"
          loading="lazy"
          decoding="async"
          alt="Early version of payment assistant"/>
-    <figcaption class="mt-2 text-sm text-slate-600 text-center">Early version of payment assistant
+    <figcaption >Early version of payment assistant
     </figcaption>
 </figure>
 
-1. We wanted to show payment types only, when the user selects the input field 
+1. We wanted to show payment types only, when the user selects the input field
 2. We used logos, icons and images of people to make the assistant more visual.
 
-
-{% lessons %}
+### Lessons learned
 Payment assistant is used mainly by professional users. It does not mean only business, but also private users. After usability testings and interviews we learned the importance of certain information, which we wanted to erase. We had also technical limitation with the logos, icons and pictures. We could not use them.
-{% endlessons %}
 
 ### Final design
 
 User interviews revealed that we cannot simply distinguish between private and business, instead basic and professional users. This resulted in payment screens with variants for both types. The example below shows the payment assistant final concept for professional users:
 
-<figure class="my-8">
-    <img class="mx-auto" src="/images/online-payments/assistant-final.webp" width="800" height="486"
+<figure >
+    <img src="/images/online-payments/assistant-final.webp" width="800" height="559"
          loading="lazy"
          decoding="async"
          alt="Domestic payment entry new flow"/>
-    <figcaption class="mt-2 text-sm text-slate-600 text-center">New version of payment assistant
+    <figcaption >New version of payment assistant
     </figcaption>
 </figure>
 
-1. User can enter single payment or even a list of payments. 
-2. We kept the autocomplete with fixed usability bugs. 
-3. All the payment types are now visible 
+1. User can enter single payment or even a list of payments.
+2. We kept the autocomplete with fixed usability bugs.
+3. All the payment types are now visible
 4. Expanded the list with Beneficiary’s account and folder information.
 
 ### Results

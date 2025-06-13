@@ -3,9 +3,9 @@ layout: projects
 title: CSX mobile banking
 image: /images/csx-mobile-banking/csx-app-lg.webp
 description: Redesign of the mobile banking experience
-client: 
-    logo: /images/logos/cs-logo.svg
-    name: Credit Suisse
+client:
+  logo: /images/logos/cs-logo.svg
+  name: Credit Suisse
 activities:
   [
     "Wireframing",
@@ -63,18 +63,37 @@ was integrated into the mobile development team. The team was based in Zürich a
         loading="lazy"
         decoding="async"
         alt="Image of a whiteboard with wire frames"/>
-   <figcaption class="text-slate-600 text-center">Initial scenarios sketched on a workshop with stakeholders
+   <figcaption>Initial scenarios sketched on a workshop with stakeholders
    </figcaption>
 </figure>
 
-{% lessons %}
+### Lessons learned
 The beginning was very chaotic, but we needed to accept this and trust the process. We learned to keep
 stakeholders in the loop, in exchange they were helping to push the concept further.
-{% endlessons %}
 
 ## Previous version
 
-{% include "content/csx-mobile-banking/previous-design.njk" %}
+
+The version before the lunch of the new app was a hybrid application, it was a responsive website packed into an
+app. In certain scenarios this solution can work, however for a mobile banking app competing with many other apps it
+was not an option. This hybrid solution had many limitations. There was a delay once the user tapped on the screen.
+Native bottom navigation could not be used. More modern interaction pattern like swiping were not fluent. When users
+wanted to check whether a transaction was made they needed to expand an accordion and go to another page and scroll.
+Once they navigated back, the whole site reloaded, making the application feel slow. Apart from performance and
+usability challenges, there was negative feedback on the branding. For the users the black and white was very sad
+and depressing.
+  
+  <figure>
+    <img
+      src="/images/csx-mobile-banking/home-previous-version.webp"
+      width="480"
+      height="709"
+      loading="lazy"
+      decoding="async"
+      alt="Previous online banking home screen"
+    />
+  </figure>
+
 
 ## Early design
 
@@ -86,9 +105,8 @@ height="512" loading="lazy" decoding="async"
 alt="Three screens of the previous home screen"/>
 </figure>
 
-{% lessons %}
+### Lessons learned
 This concept was made interactive by Origami Studio. It motivated the team and gave them the feeling of working on something great and exceptional. However, we needed adapt the design as the data was missing and the visual design was far from our current branding. Additionally, logos and profile pictures showed legal and technical concerns.
-{% endlessons %}
 
 ## Final design
 
@@ -98,8 +116,8 @@ The new home page is native, therefore we could use fluent swipe gestures to spe
 
 In summary, the top section of the home page answers the question: how much money I have? The middle section helps to find a transaction made or received. Finally, at the bottom we placed actions like pay and showing debit and credit cards.
 
-<figure class="my-8 sm:mt-0 mx-auto shrink-0">
-<img class="mt-8" src="/images/csx-mobile-banking/home-before-after.webp" width="800"
-             height="512" loading="lazy" decoding="async"
+<figure >
+<img  src="/images/csx-mobile-banking/home-before-after.webp" width="800"
+             height="621" loading="lazy" decoding="async"
              alt="Before after comparison of the home page"/>
 </figure>

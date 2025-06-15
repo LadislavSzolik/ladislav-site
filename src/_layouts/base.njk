@@ -9,6 +9,9 @@
     <meta name="og:description" content="{{ description }}" />
     <meta name="generator" content="{{ eleventy.generator }}" />
     <link rel="stylesheet" href="{{ '/assets/default.css' | url }}" />
+    <style>
+      {% getBundle "css" %}
+    </style>
   </head>
   <body>
     {% include "partials/nav.njk" %}

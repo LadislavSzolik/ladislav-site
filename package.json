@@ -7,11 +7,11 @@
   "type": "module",
   "scripts": {
     "start": "eleventy --serve --incremental --quiet",
-		"publish:dev": "ELEVENTY_ENV=dev eleventy",
-		"publish:prod": "ELEVENTY_ENV=prod eleventy",
-		"format": "biome format --write ./_source",
-		"lint": "biome lint --write ./_source",
-		"check": "biome check --write ./_source" 
+    "publish:dev": "ELEVENTY_ENV=dev eleventy",
+    "publish:prod": "ELEVENTY_ENV=prod eleventy",
+    "format": "biome format --write ./_source",
+    "lint": "biome lint --write ./_source",
+    "check": "biome check --write ./_source"
   },
   "repository": {
     "type": "git",
@@ -24,12 +24,12 @@
     "url": "https://github.com/LadislavSzolik/ladislav-site-11ty/issues"
   },
   "homepage": "https://github.com/LadislavSzolik/ladislav-site-11ty#readme",
- 
   "dependencies": {
-    "@vercel/analytics": "^1.5.0"
+    "@vercel/analytics": "^1.5.0",
+    "lightningcss": "^1.30.1"
   },
-   "devDependencies": {
+  "devDependencies": {
     "@11ty/eleventy": "^3.1.0",
-    "@biomejs/biome": "1.9.4"    
+    "@biomejs/biome": "1.9.4"
   }
 }

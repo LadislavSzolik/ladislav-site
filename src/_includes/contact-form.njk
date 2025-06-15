@@ -19,7 +19,7 @@
       gap: 0.2rem;      
     }
     & input, textarea {
-      font-family: 'IBM Plex Sans';
+      font-family: 'IBM Plex Sans', sans-serif;
       border: none;
       border-radius: 8px;
       background-color: var(--light-gray);
@@ -34,13 +34,15 @@
       color: var(--white);
       border-radius: 8px;
       background-color: var(--blue);
-      
+    }
+    & .form-status {
+      color: red;
     }
   }
 </style>
 <section class="form-container">
   <h2 id="contact">Contact</h2>
-  <form action="https://formspree.io/f/xrgoondr" method="POST" class="contact-form">
+  <form action="https://formspree.io/f/xrgoondr" method="POST" class="contact-form" id="contact-form">
     <label>
       E-mail
       <input type="email" name="email" required />
@@ -50,5 +52,42 @@
       <textarea name="message" rows="5"></textarea>
     </label>
     <button type="submit">Send</button>
+    <p id="form-status"></p>
   </form>
 </section>
+
+<script type="module">
+  document.getElementById('contact-form').addEventListener('submit', async (e) => {
+    e.preventDefault();
+    const status = document.getElementById("form-status");
+    const formData = new FormData(e.target);
+    const form = e.currentTarget;
+
+    fetch(e.target.action, {
+      method: form.method,
+      body: formData,
+      headers: {
+        'Accept': 'application/json'
+      }
+    }).then(response => {
+      if (response.ok) {
+        form.reset();
+        window.location.href = "/thank-you";
+      } else {
+        response.json().then(data => {
+          if (Object.hasOwn(data, 'errors')) {
+            status.innerHTML = data["errors"].map(error => error["message"]).join(", ")
+          } else {
+            status.innerHTML = "Oops! There was a problem submitting your form"
+          }
+        })
+      }
+    }).catch(error => {
+      status.innerHTML = "Oops! There was a problem submitting your form"
+    });
+
+
+
+
+  })
+</script>

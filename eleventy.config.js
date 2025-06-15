@@ -1,5 +1,6 @@
 import markdownIt from 'markdown-it';
-import { DateTime } from 'luxon';
+import {DateTime} from 'luxon';
+import {Features, transform} from 'lightningcss';
 
 export default async function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy({ "src/assets/images": "images" });
@@ -9,7 +10,21 @@ export default async function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy({ "src/assets/favicon.ico": "favicon.ico" });
   eleventyConfig.addPassthroughCopy({ "src/assets/robots.txt": "robots.txt" });
   eleventyConfig.addPassthroughCopy({ "src/assets/default.css": "assets/default.css" });
-  
+
+  eleventyConfig.addBundle('css', { transforms: [
+      (content) => {
+        const targets = { future: 1 }; // enables draft syntaxes
+        const result = transform({
+          code: Buffer.from(content),
+          minify: true,
+          include: Features.Nesting,
+          drafts: { customMedia: true },
+          targets,
+        });
+        return result.code.toString('utf8');
+      }
+    ]
+    , bundleHtmlContentFromSelector: "style", });
 
 
   const markdownItConfiguration = {
